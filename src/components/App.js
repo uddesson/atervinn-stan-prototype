@@ -8,24 +8,26 @@ import SearchView from './SearchView';
 
 class App extends Component {
   state = {
-    showMap: false,
-    showSearch: true,
-    showHelp: false,
-    view: 'sök' // Default, home screen
+    mapView: false,
+    searchView: true,
+    helpView: false,
+    keyWord: 'sök', // Default, home screen
+    searchWord: ''
   }
 
+  // TODO: Refactor
   toggleView = (event) => {
-    let view = event.target.value;
-    this.setState({view})
+    let keyWord = event.target.value;
+    this.setState({keyWord})
 
-    if(view === 'karta'){
-      this.setState({showMap: true, showHelp: false, showSearch: false})
+    if(keyWord === 'karta'){
+      this.setState({mapView: true, helpView: false, searchView: false})
     }
-    if(view === 'hjälp'){
-      this.setState({showHelp: true, showMap: false, showSearch: false})
+    if(keyWord === 'hjälp'){
+      this.setState({helpView: true, mapView: false, searchView: false})
     }
-    if(view === 'sök'){
-      this.setState({showSearch: true, showMap: false, showHelp: false})
+    if(keyWord === 'sök'){
+      this.setState({searchView: true, mapView: false, helpView: false})
     }
 
   }
