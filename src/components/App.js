@@ -30,15 +30,31 @@ class App extends Component {
 
   }
 
+  // Is called from SearchView -> SearchInput
+  setSeachWordToState = (event) => {
+    let searchWord = event.target.value;
+    this.setState({searchWord});
+  }
+
   render() {
     return (
       <React.Fragment>
 
-        {this.state.showSearch && <SearchView />}
-        {this.state.showMap && <GoogleMap />}
-        {this.state.showHelp && <HelpView />}
+        {this.state.searchView &&
+          <SearchView
+            setSeachWordToState={this.setSeachWordToState}
+            searchWord={this.state.searchWord}
+            /* Send along toggleview here as well,
+            because there is a "Hitta närmsta" button in SearchView,
+            that is set to toggle mapView */
+            toggleView={this.toggleView}
+          />
+        }
 
-        <Nav onClick={this.toggleView} />
+        {this.state.mapView && <GoogleMap />}
+        {this.state.helpView && <HelpView />}
+
+        <Nav toggleView={this.toggleView} />
 
       </React.Fragment>
     );
