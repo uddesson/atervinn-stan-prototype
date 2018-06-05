@@ -1,11 +1,28 @@
-import React, { Component } from 'react';
+import React from 'react';
+import Button from './Button';
 
 function Nav (props) {
     return (
         <nav className="grid">
-            <button onClick={props.onClick} value={'sök'}>sök</button>
-            <button onClick={props.onClick} value={'karta'}>karta</button>
-            <button onClick={props.onClick} value={'hjälp'}>hjälp</button>
+
+            <Button
+                onClick={props.toggleView}
+                value={'sök'}
+                content={'Sök'}
+            />
+
+            <Button
+                onClick={props.toggleView}
+                value={'karta'}
+                content={'Karta'}
+            />
+
+            <Button
+                onClick={props.toggleView}
+                value={'hjälp'}
+                content={'Hjälp'}
+            />
+
         </nav>
     )
 }
