@@ -11,18 +11,21 @@ class App extends Component {
     showMap: false,
     showSearch: true,
     showHelp: false,
-    view: 'sök'
+    view: 'sök' // Default, home screen
   }
 
   toggleView = (event) => {
     let view = event.target.value;
     this.setState({view})
 
-    if(this.state.view === 'karta'){
-      this.setState({showMap: true})
+    if(view === 'karta'){
+      this.setState({showMap: true, showHelp: false, showSearch: false})
     }
-    if(this.state.view === 'hjälp'){
-      this.setState({showHelp: true})
+    if(view === 'hjälp'){
+      this.setState({showHelp: true, showMap: false, showSearch: false})
+    }
+    if(view === 'sök'){
+      this.setState({showSearch: true, showMap: false, showHelp: false})
     }
 
   }
@@ -35,11 +38,7 @@ class App extends Component {
         {this.state.showMap && <GoogleMap />}
         {this.state.showHelp && <HelpView />}
 
-        <nav className="grid">
-            <button onClick={this.toggleView} value={'sök'}>sök</button>
-            <button onClick={this.toggleView} value={'karta'}>karta</button>
-            <button onClick={this.toggleView} value={'hjälp'}>hjälp</button>
-        </nav>
+        <Nav onClick={this.toggleView} />
 
       </React.Fragment>
     );

@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 function SearchView (props) {
     return (
         <div>
-            SearchView
+            Visar sökvyn
         </div>
     )
 }

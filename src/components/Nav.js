@@ -3,9 +3,9 @@ import React, { Component } from 'react';
 function Nav (props) {
     return (
         <nav className="grid">
-            <div onClick={props.handleView} view={'sök'}>sök</div>
-            <div onClick={props.handleView}>karta</div>
-            <div onClick={props.handleView}>hjälp</div>
+            <button onClick={props.onClick} value={'sök'}>sök</button>
+            <button onClick={props.onClick} value={'karta'}>karta</button>
+            <button onClick={props.onClick} value={'hjälp'}>hjälp</button>
         </nav>
     )
 }
