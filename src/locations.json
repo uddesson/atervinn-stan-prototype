@@ -1,0 +1,82 @@
+[
+	{
+		"lat": 59.337425,
+		"lng": 17.9011222,
+		"text": "Blackebergsvägen"
+	},
+	{
+		"lat": 59.31160763,
+		"lng": 17.98123331,
+		"text": "Vinterviken"
+	},
+	{
+		"lat": 59.2466044,
+		"lng": 18.1094329,
+		"text": "Hökarängsbadet"
+	},
+	{
+		"lat": 59.3075081,
+		"lng": 18.0298643,
+		"text": "Sjövikstorget"
+	},
+	{
+		"lat": 59.3134962,
+		"lng": 18.0227321,
+		"text": "Trekantsvägen"
+	},
+	{
+		"lat": 59.3404137,
+		"lng": 18.0118681,
+		"text": "Hornsbergs strand"
+	},
+	{
+		"lat": 59.3374703,
+		"lng": 18.0303939,
+		"text": "Kungsholms strand"
+	},
+	{
+		"lat": 59.328616,
+		"lng": 18.0247831,
+		"text": "Rålambshovsparken"
+	},
+	{
+		"lat": 59.3321641,
+		"lng": 18.0757529,
+		"text": "Raoul Wallenbergs torg"
+	},
+	{
+		"lat": 59.3289624,
+		"lng": 18.0685026,
+		"text": "Strömgatan"
+	},
+	{
+		"lat": 59.3289624,
+		"lng": 18.0685026,
+		"text": "Tegelbacken"
+	},
+	{
+		"lat": 59.26020843,
+		"lng": 18.15944237,
+		"text": "Flatenvägen"
+	},
+	{
+		"lat": 59.2868193,
+		"lng": 17.8923082,
+		"text": "Sätra strandbad"
+	},
+	{
+		"lat": 59.3045314,
+		"lng": 18.0872983,
+		"text": "Hammarby kaj"
+	},
+	{
+		"lat": 59.3120472,
+		"lng": 18.0840245,
+		"text": "Nytorget"
+	},
+	{
+		"lat": 59.3238692,
+		"lng": 18.0760107,
+		"text": "Skeppsbrokajen" 
+	}
+]
