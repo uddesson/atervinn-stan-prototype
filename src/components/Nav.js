@@ -9,18 +9,21 @@ function Nav (props) {
                 onClick={props.toggleView}
                 value={'sök'}
                 content={'Sök'}
+                className='btn'
             />
 
             <Button
                 onClick={props.toggleView}
                 value={'karta'}
                 content={'Karta'}
+                className='btn'
             />
 
             <Button
                 onClick={props.toggleView}
                 value={'hjälp'}
                 content={'Hjälp'}
+                className='btn'
             />
 
         </nav>

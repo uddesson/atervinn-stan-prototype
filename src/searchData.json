@@ -1,0 +1,27 @@
+[
+	{
+        "name": "plastbestick",
+        "sortedAs": "plast",
+		"compatible": true
+    },
+    {
+        "name": "engångsgrill",
+        "sortedAs": "i specialla röda sopkräl markerade med texten 'engångsgrill'",
+		"compatible": true
+    },
+    {
+        "name": "ölflaska",
+        "sortedAs": "glas",
+		"compatible": true
+    },
+    {
+        "name": "kapsyl",
+        "sortedAs": "metall",
+		"compatible": false
+    },
+    {
+        "name": "tändvätska",
+        "sortedAs": "miljöfarligt avfall",
+		"compatible": false
+    }
+]
