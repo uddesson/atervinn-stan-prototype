@@ -5,45 +5,77 @@ import searchData from '../searchData.json';
 
 class SearchView extends React.Component {
 
-
-    compatibleResults = searchData.filter(function(result){
-        return result.compatible === true;
-    })
+    state = {
+        searchOutput: '',
+        showActionButton: true,
+    }
 
     handleSearch = (event) => {
         event.preventDefault();
-        /* Check for results and return them here,
-        also needs error and default output */
-        console.log('Search output..')
-        console.log(searchData)
-        console.log(this.compatibleResults)
-
         this.checkForMatch(this.props.searchWord);
     }
 
     checkForMatch = (searchWord) => {
-        let matches = searchData.filter(function(match){
+        let matches = searchData.filter(function(match) {
             return match.name === searchWord;
         })
 
-        console.log(matches)
+        if(matches.length === 0) {
+            this.setState({
+                searchOutput: 'Vi hittar inga resultat som matchar din sökning',
+                showActionButton: false
+            })
+        }
+
+        else {
+            let searchOutput = matches.map(function(result){
+                if(result.compatible === false){
+                    return {
+                        text: result.name + ' ska sorteras som ' + result.sortedAs + ' på en återvinningscentral. Läs mer under "Hjälp".',
+                        compatible: result.compatible
+                    }
+                }
+                else if(result.compatible === true){
+                    return {
+                        text: result.name + ' kan du återvinna i stan. Sorteras som ' + result.sortedAs + '.',
+                        compatible: result.compatible
+                    }
+                }
+            })
+
+            searchOutput = searchOutput[0];
+
+            this.setState({
+                searchOutput: searchOutput.text,
+                showActionButton: searchOutput.compatible
+            })
+        }
     }
+
 
     render(){
         return (
             <div className="container">
+                <h2>Vad vill du återvinna?</h2>
+
                 <SearchInput
                     setSeachWordToState={this.props.setSeachWordToState}
                     searchWord={this.props.searchWord}
                     handleSearch={this.handleSearch}
                 />
 
-                <Button
-                    onClick={this.props.toggleView}
-                    value={'karta'}
-                    content={'Hitta närmsta'}
-                />
-                <div></div>
+                <p>
+                    {this.state.searchOutput}
+                </p>
+
+                {this.state.showActionButton &&
+                    <Button
+                        onClick={this.props.toggleView}
+                        value={'karta'}
+                        content={'Hitta närmsta ställe'}
+                        className={'btn__call-to-action'}
+                    />
+                 }
 
             </div>
         )

@@ -6,7 +6,7 @@ class SearchInput extends Component {
         return(
             <React.Fragment>
                 <form onSubmit={this.props.handleSearch}>
-                <label htmlFor="search">Vad vill du slänga?</label>
+                    <label htmlFor="search" className="hidden">Vad vill du återvinna?</label>
                     <br/>
                     <input  name="search"
                             type="text"
@@ -15,7 +15,7 @@ class SearchInput extends Component {
                             value={this.props.searchWord}
                     >
                     </input>
-                    <input type="submit"></input>
+                    <input type="submit" value="Sök"></input>
                 </form>
 
                 <div>
