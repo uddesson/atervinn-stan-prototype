@@ -55,7 +55,7 @@ class SearchView extends React.Component {
 
     render(){
         return (
-            <div className="container">
+            <div className="container center">
                 <h2>Vad vill du återvinna?</h2>
 
                 <SearchInput
@@ -72,11 +72,10 @@ class SearchView extends React.Component {
                     <Button
                         onClick={this.props.toggleView}
                         value={'karta'}
-                        content={'Hitta närmsta ställe'}
+                        content={'Hitta närmsta'}
                         className={'btn__call-to-action'}
                     />
-                 }
-
+                }
             </div>
         )
     }
