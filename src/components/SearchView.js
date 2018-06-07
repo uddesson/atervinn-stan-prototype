@@ -6,7 +6,11 @@ import searchData from '../searchData.json';
 class SearchView extends React.Component {
 
     state = {
-        searchOutput: '',
+        searchOutput: {
+            name: '',
+            sortedAs: '',
+            noResults: ''
+        },
         showActionButton: true,
     }
 
@@ -22,32 +26,40 @@ class SearchView extends React.Component {
 
         if(matches.length === 0) {
             this.setState({
-                searchOutput: 'Vi hittar inga resultat som matchar din sökning',
+                searchOutput: { noResults: 'Vi hittar inga resultat som matchar din sökning.'},
                 showActionButton: false
             })
         }
 
         else {
-            let searchOutput = matches.map(function(result){
+            let searchResults = matches.map(function(result){
                 if(result.compatible === false){
                     return {
-                        text: result.name + ' ska sorteras som ' + result.sortedAs + ' på en återvinningscentral. Läs mer under "Hjälp".',
+                        name: result.name,
+                        sortedAs: result.sortedAs,
+                        text: ' kan du inte återvinna i stan. Sorteras på en återvinningscentral som ',
                         compatible: result.compatible
                     }
                 }
                 else if(result.compatible === true){
                     return {
-                        text: result.name + ' kan du återvinna i stan. Sorteras som ' + result.sortedAs + '.',
+                        name: result.name,
+                        sortedAs: result.sortedAs,
+                        text: ' kan du återvinna i stan. Sorteras som ',
                         compatible: result.compatible
                     }
                 }
             })
 
-            searchOutput = searchOutput[0];
+            searchResults = searchResults[0];
 
             this.setState({
-                searchOutput: searchOutput.text,
-                showActionButton: searchOutput.compatible
+                searchOutput: {
+                    name: searchResults.name,
+                    sortedAs: searchResults.sortedAs,
+                    text: searchResults.text
+                },
+                showActionButton: searchResults.compatible
             })
         }
     }
@@ -64,8 +76,12 @@ class SearchView extends React.Component {
                     handleSearch={this.handleSearch}
                 />
 
+                
                 <p>
-                    {this.state.searchOutput}
+                    <span className="red">{this.state.searchOutput.name}</span>
+                    {this.state.searchOutput.text}
+                    <span className="green">{this.state.searchOutput.sortedAs}</span>
+                    <span className="pink">{this.state.searchOutput.noResults}</span>
                 </p>
 
                 {this.state.showActionButton &&
