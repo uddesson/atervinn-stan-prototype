@@ -3,8 +3,12 @@ General
 */
 
 html {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+
+          --primary-color: #9ac89f;
+          --primary-color-light: #b6e6bc;
+          --primary-color-dark: #7baa80;
 }
 
 *,
@@ -40,15 +44,20 @@ html {
   Buttons
 */
 
-.btn {
-    padding: 5px;
-    border-radius: 0px;
+.btn{
+  padding: 5px;
+  border-radius: 0px;
 }
 
 .btn__call-to-action {
     padding: 10px;
+    background-color: var(--primary-color);
     border-radius: 15px;
     margin: 10px 0;
+}
+
+.btn__call-to-action:hover{
+  background-color: var(--primary-color-dark);
 }
 
 /*
