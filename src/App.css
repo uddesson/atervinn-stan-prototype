@@ -6,9 +6,11 @@ html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 
-          --primary-color: #9ac89f;
-          --primary-color-light: #b6e6bc;
-          --primary-color-dark: #7baa80;
+          --primary-green: #9ac89f;
+          --primary-green-light: #b6e6bc;
+          --primary-green-dark: #7baa80;
+          --warning: #F2784B;
+          --blue: #3498DB;
 }
 
 *,
@@ -27,7 +29,16 @@ html {
 }
 
 .container {
-    padding: 20px;
+  min-height: 90vh;
+  padding: 20px;
+}
+
+.container-inner{
+  padding: 30px;
+}
+
+nav{
+  min-height: 10vh;
 }
 
 .icon--header {
@@ -40,6 +51,13 @@ html {
     width: 40px;
 }
 
+.outlined{
+  padding: 5px;
+  border: 2px solid var(--primary-green);
+  color: var(--primary-green);
+  border-radius: 8px;
+}
+
 /*
   Buttons
 */
@@ -47,17 +65,55 @@ html {
 .btn{
   padding: 5px;
   border-radius: 0px;
+  -webkit-appearance: none;
+    appearance: none;
 }
 
 .btn__call-to-action {
-    padding: 10px;
-    background-color: var(--primary-color);
-    border-radius: 15px;
-    margin: 10px 0;
+    width: 70%;
+    padding: 22px;
+    border: none;
+    color: white;
+    font-size: 0.9em;
+    background-color: var(--primary-green);
+    border-radius: 30px;
+    margin: 30px 0;
+    -webkit-appearance: none;
+      appearance: none;
 }
 
-.btn__call-to-action:hover{
-  background-color: var(--primary-color-dark);
+.btn__call-to-action:hover,.btn__call-to-action:focus{
+  background-color: var(--primary-green-dark);
+}
+
+/*
+  Input
+*/
+
+input[type="text"], input[type="submit"]{
+  font-size: 0.9em;
+  border: none;
+  padding: 15px;
+  margin-bottom: 30px;
+  -webkit-appearance: none;
+    appearance: none;
+}
+
+input[type="text"]{
+  width: 70%;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  background-color: white;
+  border: 2px solid var(--primary-green);
+  color: var(--primary-green-dark)
+}
+
+input[type="submit"]{
+  background-color: var(--primary-green);
+  border: 2px solid var(--primary-green);
+  color: white;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
 }
 
 /*
