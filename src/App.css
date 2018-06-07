@@ -99,19 +99,19 @@ html {
 .margin-left-5 {
     margin-left: 5px;
 }
-/*
-  To be removed, currently used for testing
-*/
 
-.red {
-    text-transform: capitalize;
-    color: red;
+.capitalize {
+  text-transform: capitalize;
 }
 
-.green {
-    color: green;
+.line-height-extra {
+  line-height: 200%;
 }
 
-.pink {
-    color: pink;
+.warning {
+  color: var(--warning);
+}
+
+.success {
+  color: var(--blue);
 }
