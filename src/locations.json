@@ -100,5 +100,36 @@
 		"lng": 18.04127772,
 		"text": "Vasaparken",
 		"type": "engångsgrill återvinning"
+	},
+	{
+		"lat": 59.3132448,
+		"lng": 18.0491289,
+		"text": "Tantolunden",
+		"type": "engångsgrill återvinning"
+	},
+	{
+		"lat": 59.32811796,
+		"lng": 18.02581843,
+		"text": "Rålambshovsparken",
+		"type": "engångsgrill återvinning"
+	},
+	{
+		"lat": 59.32811796,
+		"lng": 18.02581843,
+		"text": "Rålambshovsparken",
+		"type": "engångsgrill återvinning"
+	},
+	{
+		"lat": 59.33238995,
+		"lng": 18.03364891,
+		"text": "Kronobergssparken",
+		"type": "engångsgrill återvinning"
+	},
+	{
+		"lat": 59.3214503,
+		"lng": 18.02302329,
+		"text": "Långholmsbader",
+		"type": "engångsgrill återvinning"
 	}
+	
 ]
