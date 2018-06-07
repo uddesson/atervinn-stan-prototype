@@ -23,6 +23,7 @@ class GoogleMap extends Component {
                 lat={location.lat}
                 lng={location.lng}
                 text={location.text}
+                type={location.type}
                 key={location.text}
             />
         ));
