@@ -4,6 +4,7 @@ import GoogleMap from './GoogleMap';
 import Nav from './Nav.js';
 import HelpView from './HelpView';
 import SearchView from './SearchView';
+import Header from './Header';
 import locations from '../locations.json';
 
 class App extends Component {
@@ -52,6 +53,7 @@ class App extends Component {
     render() {
         return (
             <React.Fragment>
+                <Header />
                 {this.state.searchView && (
                     <SearchView
                         setSeachWordToState={this.setSeachWordToState}
