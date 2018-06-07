@@ -1,7 +1,7 @@
 import React from 'react';
 import plasticIcon from '../icons/icons8-plastic-80.png';
 import paperIcon from '../icons/icons8-coffee-to-go-80.png';
-import tinIcon from '../icons/icons8-tin-can-80.png';
+import miscIcon from '../icons/icons8-disposal-80.png';
 import glassIcon from '../icons/icons8-fragile-80.png';
 import recyclingIcon from '../icons/icons8-recycling-80.png';
 import grillIcon from '../icons/icons8-grill-80.png';
@@ -9,73 +9,99 @@ import grillIcon from '../icons/icons8-grill-80.png';
 function HelpView(props) {
     return (
         <div className="container">
-            <h2>Det här kan du slänga på stationerna</h2>
+            <h1>Det här kan du slänga på stationerna</h1>
             <div>
-                <h3>
+                <h2>
                     <span style={{ verticalAlign: 'super' }}>
-                        Stationer markerade med
+                        ... markerade med
                     </span>
                     <img
                         src={recyclingIcon}
                         alt="allmän återvinning"
-                        style={{ height: '30px', width: '30px' }}
+                        className="icon--header margin-left-5"
                     />
-                </h3>
-                <div>
+                </h2>
+                <div className="margin-y-20">
                     <img
                         src={plasticIcon}
                         alt="plastflaska"
-                        style={{ height: '40px', width: '40px' }}
+                        className="icon margin-right-5"
                     />
-                    <span>plastbestick etc</span>
+                    <span className="bold margin-right-5">Plast</span>
+                    <span className="line-height-normal">
+                        t.ex. plastbestick, plastkorkar och olika
+                        plastförpackningar.
+                    </span>
                 </div>
-                <div>
+                <div className="margin-y-20">
                     <img
                         src={paperIcon}
                         alt="take away mugg"
-                        style={{ height: '40px', width: '40px' }}
+                        className="icon margin-right-5"
                     />
-                    <span>pappersmuggar etc</span>
+                    <span className="bold margin-right-5">Papper</span>
+                    <span className="line-height-normal">
+                        t.ex. take away-muggar, pappersbestick och andra typer
+                        av pappersförpackningar.
+                    </span>
                 </div>
-                <div>
-                    <img
-                        src={tinIcon}
-                        alt="öppen konservburk"
-                        style={{ height: '40px', width: '40px' }}
-                    />
-                    <span>kapsyler etc</span>
-                </div>
-                <div>
+                <div className="margin-y-20">
                     <img
                         src={glassIcon}
                         alt="trasigt glas"
-                        style={{ height: '40px', width: '40px' }}
+                        className="icon margin-right-5"
                     />
-                    <span>glasflaskor etc</span>
+                    <span className="bold margin-right-5">Glas</span>
+                    <span className="line-height-normal">
+                        t.ex. glasflaskor och glasburkar.
+                    </span>
+                </div>
+                <div className="margin-y-20">
+                    <img
+                        src={miscIcon}
+                        alt="papperskorg"
+                        className="icon margin-right-5"
+                    />
+                    <span className="bold margin-right-5">Övrigt avfall</span>
+                    <span className="line-height-normal">
+                        t.ex. servetter, ciggarettfimpar och tuggumi.
+                    </span>
                 </div>
             </div>
             <div>
-                <h3>
+                <h2>
                     <span style={{ verticalAlign: 'super' }}>
-                        Stationer markerade med
+                        ... markerade med
                     </span>
                     <img
                         src={grillIcon}
                         alt="återvinning för engångsgrill"
-                        style={{ height: '30px', width: '30px' }}
+                        className="icon--header margin-left-5"
                     />
-                </h3>
-                <div>
+                </h2>
+                <div className="margin-y-20">
                     <img
                         src={grillIcon}
                         alt="grill"
-                        style={{ height: '40px', width: '40px' }}
+                        className="icon margin-right-5"
                     />
-                    <span>endast engångsgrillar</span>
+                    <span className="bold margin-right-5">Engångsgrillar</span>
+                    <span className="line-height-normal">
+                        endast engångsgrillar.
+                    </span>
                 </div>
             </div>
-            <h4>Aktuellt</h4>
-            <p>Inga nyheter</p>
+            <div className="margin-y-30">
+                <h3>Aktuellt</h3>
+                <article>
+                    <h4 className="margin-y-5">Nu kan du återvinna igen!</h4>
+                    <small>Publicerat 2 April 2018</small>
+                    <p>
+                        Nu står de olika återvinningskärlen ute på stockholms
+                        gator och stränder för iår!
+                    </p>
+                </article>
+            </div>
         </div>
     );
 }
