@@ -2,81 +2,103 @@
 	{
 		"lat": 59.337425,
 		"lng": 17.9011222,
-		"text": "Blackebergsvägen"
+		"text": "Blackebergsvägen",
+		"type": "allmän återvinning"
 	},
 	{
 		"lat": 59.31160763,
 		"lng": 17.98123331,
-		"text": "Vinterviken"
+		"text": "Vinterviken",
+		"type": "allmän återvinning"
 	},
 	{
 		"lat": 59.2466044,
 		"lng": 18.1094329,
-		"text": "Hökarängsbadet"
+		"text": "Hökarängsbadet",
+		"type": "allmän återvinning"
 	},
 	{
 		"lat": 59.3075081,
 		"lng": 18.0298643,
-		"text": "Sjövikstorget"
+		"text": "Sjövikstorget",
+		"type": "allmän återvinning"
 	},
 	{
 		"lat": 59.3134962,
 		"lng": 18.0227321,
-		"text": "Trekantsvägen"
+		"text": "Trekantsvägen",
+		"type": "allmän återvinning"
 	},
 	{
 		"lat": 59.3404137,
 		"lng": 18.0118681,
-		"text": "Hornsbergs strand"
+		"text": "Hornsbergs strand",
+		"type": "allmän återvinning"
 	},
 	{
 		"lat": 59.3374703,
 		"lng": 18.0303939,
-		"text": "Kungsholms strand"
+		"text": "Kungsholms strand",
+		"type": "allmän återvinning"
 	},
 	{
 		"lat": 59.328616,
 		"lng": 18.0247831,
-		"text": "Rålambshovsparken"
+		"text": "Rålambshovsparken",
+		"type": "allmän återvinning"
 	},
 	{
 		"lat": 59.3321641,
 		"lng": 18.0757529,
-		"text": "Raoul Wallenbergs torg"
+		"text": "Raoul Wallenbergs torg",
+		"type": "allmän återvinning"
 	},
 	{
 		"lat": 59.3289624,
 		"lng": 18.0685026,
-		"text": "Strömgatan"
+		"text": "Strömgatan",
+		"type": "allmän återvinning"
 	},
 	{
 		"lat": 59.3289624,
 		"lng": 18.0685026,
-		"text": "Tegelbacken"
+		"text": "Tegelbacken",
+		"type": "allmän återvinning"
 	},
 	{
 		"lat": 59.26020843,
 		"lng": 18.15944237,
-		"text": "Flatenvägen"
+		"text": "Flatenvägen",
+		"type": "allmän återvinning"
 	},
 	{
 		"lat": 59.2868193,
 		"lng": 17.8923082,
-		"text": "Sätra strandbad"
+		"text": "Sätra strandbad",
+		"type": "allmän återvinning"
 	},
 	{
 		"lat": 59.3045314,
 		"lng": 18.0872983,
-		"text": "Hammarby kaj"
+		"text": "Hammarby kaj",
+		"type": "allmän återvinning"
 	},
 	{
 		"lat": 59.3120472,
 		"lng": 18.0840245,
-		"text": "Nytorget"
+		"text": "Nytorget",
+		"type": "allmän återvinning"
 	},
 	{
 		"lat": 59.3238692,
 		"lng": 18.0760107,
-		"text": "Skeppsbrokajen" 
+		"text": "Skeppsbrokajen",
+		"type": "allmän återvinning"
+	},
+	{
+		"lat": 59.33936675,
+		"lng": 18.04127772,
+		"text": "Vasaparken",
+		"type": "engångsgrill återvinning"
 	}
 ]
