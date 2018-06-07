@@ -20,6 +20,17 @@ html {
     box-sizing: inherit;
 }
 
+header{
+  height: 12vh;
+  text-align: center;
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+}
+
+.logo{
+  height: 50px;
+  margin: 20px auto 10px auto;
+}
+
 .grid {
     display: -ms-grid;
     display: grid;
@@ -29,7 +40,7 @@ html {
 }
 
 .container {
-  min-height: 90vh;
+  min-height: 76vh;
   padding: 20px;
 }
 
@@ -38,6 +49,7 @@ html {
 }
 
 nav{
+  height: 12vh;
   min-height: 10vh;
 }
 
