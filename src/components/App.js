@@ -68,7 +68,12 @@ class App extends Component {
                 {this.state.mapView && <GoogleMap locations={locations} />}
                 {this.state.helpView && <HelpView />}
 
-                <Nav toggleView={this.toggleView} />
+                <Nav
+                    toggleView={this.toggleView}
+                    searchView={this.state.searchView}
+                    mapView={this.state.mapView}
+                    helpView={this.state.helpView}
+                />
             </React.Fragment>
         );
     }

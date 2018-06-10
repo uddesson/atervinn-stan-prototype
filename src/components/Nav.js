@@ -1,8 +1,8 @@
 import React from 'react';
 import Button from './Button';
-import searchIcon from '../icons/basic_magnifier.svg';
-import mapIcon from '../icons/basic_geolocalize-05.svg';
-import helpIcon from '../icons/basic_question.svg';
+import SearchIcon from './SearchIcon';
+import MapIcon from './MapIcon';
+import HelpIcon from './HelpIcon';
 
 function Nav(props) {
     return (
@@ -11,27 +11,33 @@ function Nav(props) {
                 onClick={props.toggleView}
                 value={'sök'}
                 type={'nav'}
-                icon={searchIcon}
+                icon={<SearchIcon searchView={props.searchView} />}
                 content={'Sök'}
-                className="btn border-none btn__nav text-white"
+                className={`btn border-none btn__nav ${
+                    props.searchView ? 'active' : 'text-white'
+                }`}
             />
 
             <Button
                 onClick={props.toggleView}
                 value={'karta'}
                 type={'nav'}
-                icon={mapIcon}
+                icon={<MapIcon mapView={props.mapView} />}
                 content={'Karta'}
-                className="btn border-none btn__nav text-white"
+                className={`btn border-none btn__nav ${
+                    props.mapView ? 'active' : 'text-white'
+                }`}
             />
 
             <Button
                 onClick={props.toggleView}
                 value={'hjälp'}
                 type={'nav'}
-                icon={helpIcon}
+                icon={<HelpIcon helpView={props.helpView} />}
                 content={'Hjälp'}
-                className="btn border-none btn__nav text-white"
+                className={`btn border-none btn__nav ${
+                    props.helpView ? 'active' : 'text-white'
+                }`}
             />
         </nav>
     );
