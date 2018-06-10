@@ -8,8 +8,10 @@ function Button(props) {
             value={props.value}
             type={props.type}
         >
-            {props.type === 'nav' ? <img src={props.icon} alt=" " className="icon--small" /> : null}
-            <p className={props.type === 'nav' ? 'margin-small' : ''}>{props.content}</p>
+            {props.icon ? props.icon : null}
+            <p className={props.type === 'nav' ? 'margin-small' : ''}>
+                {props.content}
+            </p>
         </button>
     );
 }

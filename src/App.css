@@ -60,8 +60,8 @@ nav {
 }
 
 .icon--small {
-  height: 20px;
-  width: 20px;
+    height: 20px;
+    width: 20px;
 }
 
 .icon {
@@ -89,6 +89,11 @@ nav {
 
 .btn__nav {
     background-color: var(--grey);
+}
+
+.nav-icon {
+    width: 20px;
+    height: 20px;
 }
 
 .btn__call-to-action {
@@ -196,14 +201,22 @@ input[type='submit'] {
     color: var(--blue);
 }
 
+.active--stroke {
+    stroke: var(--primary-green-dark);
+}
+
+.active {
+    color: var(--primary-green-dark);
+}
+
 .border-none {
     border: none;
 }
 
 .text-white {
-  color: #ffffff;
+    color: #ffffff;
 }
 
 .margin-small {
-  margin: 5px;
+    margin: 5px;
 }
