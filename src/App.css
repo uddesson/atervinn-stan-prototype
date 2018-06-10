@@ -12,6 +12,7 @@ html {
     --warning: #f2784b;
     --blue: #3498db;
     --grey: #7f7f7f;
+    --white-light: #ffffff;
 }
 
 *,
@@ -202,11 +203,15 @@ input[type='submit'] {
 }
 
 .active--stroke {
-    stroke: var(--primary-green-dark);
+    stroke: var(--white-light);
+}
+
+.active--stroke-width {
+    stroke-width: 4px;
 }
 
 .active {
-    color: var(--primary-green-dark);
+    color: var(--white-light);
 }
 
 .border-none {
