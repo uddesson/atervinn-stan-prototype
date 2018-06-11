@@ -11,10 +11,15 @@ function Nav(props) {
                 onClick={props.toggleView}
                 value={'sök'}
                 type={'nav'}
-                icon={<SearchIcon searchView={props.searchView} />}
+                icon={
+                    <SearchIcon
+                        searchView={props.searchView}
+                        onClick={props.toggleView}
+                    />
+                }
                 content={'Sök'}
                 className={`btn border-none btn__nav ${
-                    props.searchView ? 'active' : 'text-white'
+                    props.searchView ? 'active bold' : 'text-white'
                 }`}
             />
 
@@ -22,10 +27,15 @@ function Nav(props) {
                 onClick={props.toggleView}
                 value={'karta'}
                 type={'nav'}
-                icon={<MapIcon mapView={props.mapView} />}
+                icon={
+                    <MapIcon
+                        mapView={props.mapView}
+                        onClick={props.toggleView}
+                    />
+                }
                 content={'Karta'}
                 className={`btn border-none btn__nav ${
-                    props.mapView ? 'active' : 'text-white'
+                    props.mapView ? 'active bold' : 'text-white'
                 }`}
             />
 
@@ -36,7 +46,7 @@ function Nav(props) {
                 icon={<HelpIcon helpView={props.helpView} />}
                 content={'Hjälp'}
                 className={`btn border-none btn__nav ${
-                    props.helpView ? 'active' : 'text-white'
+                    props.helpView ? 'active bold' : 'text-white'
                 }`}
             />
         </nav>
