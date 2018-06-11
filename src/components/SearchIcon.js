@@ -3,7 +3,7 @@ import React from 'react';
 function SearchIcon(props) {
     return (
         <svg
-            className={`nav-icon ${
+            className={`nav-icon pointer-none ${
                 props.searchView ? 'active--stroke active--stroke-width' : ''
             }`}
             version="1.1"
@@ -18,7 +18,7 @@ function SearchIcon(props) {
             stroke="#F1F5F8"
             strokeWidth="2"
         >
-            <g>
+            <g onClick={props.onClick}>
                 <circle
                     fill="none"
                     strokeMiterlimit="10"

@@ -225,3 +225,7 @@ input[type='submit'] {
 .margin-small {
     margin: 5px;
 }
+
+.pointer-none {
+    pointer-events: none;
+}

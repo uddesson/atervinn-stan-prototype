@@ -3,7 +3,7 @@ import React from 'react';
 function HelpIcon(props) {
     return (
         <svg
-            className={`nav-icon ${
+            className={`nav-icon pointer-none ${
                 props.helpView ? 'active--stroke active--stroke-width' : ''
             }`}
             version="1.1"
