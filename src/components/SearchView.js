@@ -3,21 +3,63 @@ import SearchInput from './SearchInput';
 import Button from './Button';
 import searchData from '../searchData.json';
 import miscIcon from '../icons/icons8-disposal-80.png';
+import AutoCompleteResults from './AutoCompleteResults';
 
 class SearchView extends React.Component {
 
     state = {
+        searchWord: '',
         searchOutput: {
             name: '',
             sortedAs: '',
             noResults: ''
         },
         showActionButton: true,
+        autoCompleteResults: ''
+    }
+
+    handleInput = (event) => {
+        let searchWord = event.target.value;
+        this.setState({ searchWord });
+
+        let searchWordChars = searchWord.split('');
+
+        if(searchWordChars.length >= 3){
+            this.autoComplete(searchWord);
+        }
+        else {
+            this.setState({autoCompleteResults: []})
+        }
+    };
+
+    autoComplete = (searchWord) => {
+        let data = searchData.map(function(singleData){
+            return singleData.name;
+        })
+
+        let autoCompleteResults = [];
+
+        for (let name of data){
+            if(name.indexOf(searchWord) !== -1){
+                autoCompleteResults.push(name);
+            }
+        }
+
+        this.setState({autoCompleteResults})
     }
 
     handleSearch = (event) => {
         event.preventDefault();
-        this.checkForMatch(this.props.searchWord);
+        this.checkForMatch(this.state.searchWord);
+    }
+
+    handleAutoCompleteSearch = (event) => {
+        event.preventDefault();
+        let searchWord = event.target.dataset.txt;
+        this.checkForMatch(searchWord)
+
+        // Reset the output of autocomplete
+        this.setState({autoCompleteResults: []})
     }
 
     checkForMatch = (searchWord) => {
@@ -75,10 +117,17 @@ class SearchView extends React.Component {
                 <h2>Vad vill du återvinna?</h2>
 
                 <SearchInput
-                    setSeachWordToState={this.props.setSeachWordToState}
-                    searchWord={this.props.searchWord}
+                    handleInput={this.handleInput}
+                    searchWord={this.state.searchWord}
                     handleSearch={this.handleSearch}
                 />
+
+                {this.state.autoCompleteResults &&
+                    <AutoCompleteResults
+                        handleAutoCompleteSearch={this.handleAutoCompleteSearch}
+                        autoCompleteResults={this.state.autoCompleteResults}
+                    />
+                }
 
                 <div className="container-inner">
                     <p>

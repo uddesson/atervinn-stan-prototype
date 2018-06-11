@@ -10,8 +10,9 @@ class SearchInput extends Component {
                 <input  name="search"
                         type="text"
                         placeholder="T.ex plastbestick"
-                        onChange={this.props.setSeachWordToState}
+                        onChange={this.props.handleInput}
                         value={this.props.searchWord}
+                        autoComplete="off"
                 >
                 </input>
                 <input type="submit" value="Sök"></input>
