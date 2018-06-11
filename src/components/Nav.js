@@ -19,7 +19,7 @@ function Nav(props) {
                 }
                 content={'Sök'}
                 className={`btn border-none btn__nav ${
-                    props.searchView ? 'active' : 'text-white'
+                    props.searchView ? 'active bold' : 'text-white'
                 }`}
             />
 
@@ -35,7 +35,7 @@ function Nav(props) {
                 }
                 content={'Karta'}
                 className={`btn border-none btn__nav ${
-                    props.mapView ? 'active' : 'text-white'
+                    props.mapView ? 'active bold' : 'text-white'
                 }`}
             />
 
@@ -46,7 +46,7 @@ function Nav(props) {
                 icon={<HelpIcon helpView={props.helpView} />}
                 content={'Hjälp'}
                 className={`btn border-none btn__nav ${
-                    props.helpView ? 'active' : 'text-white'
+                    props.helpView ? 'active bold' : 'text-white'
                 }`}
             />
         </nav>

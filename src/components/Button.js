@@ -12,7 +12,7 @@ function Button(props) {
                 {props.icon ? props.icon : null}
                 <p
                     className={`pointer-none ${
-                        props.type === 'nav' ? 'margin-small' : ''
+                        props.type === 'nav' ? 'margin-small' : 'margin-none'
                     }`}
                 >
                     {props.content}

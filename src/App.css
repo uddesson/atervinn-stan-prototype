@@ -186,6 +186,10 @@ input[type='submit'] {
     margin-left: 5px;
 }
 
+.margin-none {
+    margin: 0px;
+}
+
 .capitalize {
     text-transform: capitalize;
 }
