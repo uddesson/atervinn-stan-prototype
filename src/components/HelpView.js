@@ -9,98 +9,131 @@ import grillIcon from '../icons/icons8-grill-80.png';
 function HelpView(props) {
     return (
         <div className="container">
-            <h1>Det här kan du slänga på stationerna</h1>
-            <div>
-                <h2>
-                    <span style={{ verticalAlign: 'super' }}>
-                        ... markerade med
-                    </span>
-                    <img
-                        src={recyclingIcon}
-                        alt="allmän återvinning"
-                        className="icon--header margin-left-5"
-                    />
-                </h2>
-                <div className="margin-y-20">
-                    <img
-                        src={plasticIcon}
-                        alt="plastflaska"
-                        className="icon margin-right-5"
-                    />
-                    <span className="bold margin-right-5">Plast</span>
-                    <span className="line-height-normal">
-                        t.ex. plastbestick, plastkorkar och olika
-                        plastförpackningar.
-                    </span>
-                </div>
-                <div className="margin-y-20">
-                    <img
-                        src={paperIcon}
-                        alt="take away mugg"
-                        className="icon margin-right-5"
-                    />
-                    <span className="bold margin-right-5">Papper</span>
-                    <span className="line-height-normal">
-                        t.ex. take away-muggar, pappersbestick och andra typer
-                        av pappersförpackningar.
-                    </span>
-                </div>
-                <div className="margin-y-20">
-                    <img
-                        src={glassIcon}
-                        alt="trasigt glas"
-                        className="icon margin-right-5"
-                    />
-                    <span className="bold margin-right-5">Glas</span>
-                    <span className="line-height-normal">
-                        t.ex. glasflaskor och glasburkar.
-                    </span>
-                </div>
-                <div className="margin-y-20">
-                    <img
-                        src={miscIcon}
-                        alt="papperskorg"
-                        className="icon margin-right-5"
-                    />
-                    <span className="bold margin-right-5">Övrigt avfall</span>
-                    <span className="line-height-normal">
-                        t.ex. servetter, ciggarettfimpar och tuggumi.
-                    </span>
-                </div>
-            </div>
-            <div>
-                <h2>
-                    <span style={{ verticalAlign: 'super' }}>
-                        ... markerade med
-                    </span>
-                    <img
-                        src={grillIcon}
-                        alt="återvinning för engångsgrill"
-                        className="icon--header margin-left-5"
-                    />
-                </h2>
-                <div className="margin-y-20">
-                    <img
-                        src={grillIcon}
-                        alt="grill"
-                        className="icon margin-right-5"
-                    />
-                    <span className="bold margin-right-5">Engångsgrillar</span>
-                    <span className="line-height-normal">
-                        endast engångsgrillar.
-                    </span>
+            <div className="card">
+                <h1 className="margin-none line-height-normal">
+                    Symbolförklaring
+                </h1>
+                <div>
+                    <h2 className="margin-none">
+                        <p className="text-normal line-height-normal">
+                            På stationer markerade med
+                            <img
+                                src={recyclingIcon}
+                                alt="allmän återvinning"
+                                className="icon--small margin-left-5 margin-right-5 vertical-sub"
+                            />
+                            kan du slänga följande
+                        </p>
+                    </h2>
+                    <div className="margin-y-20 line-height-extra flex">
+                        <img
+                            src={plasticIcon}
+                            alt="plastflaska"
+                            className="icon margin-right-5"
+                        />
+                        <div>
+                            <span className="bold margin-right-5 outlined">
+                                Plast
+                            </span>
+                            <span className="line-height-normal">
+                                t.ex. plastbestick, korkar och olika
+                                plastförpackningar.
+                            </span>
+                        </div>
+                    </div>
+                    <div className="margin-y-20 line-height-extra flex">
+                        <img
+                            src={paperIcon}
+                            alt="take away mugg"
+                            className="icon margin-right-5"
+                        />
+                        <div>
+                            <span className="bold margin-right-5 outlined">
+                                Papper
+                            </span>
+                            <span className="line-height-normal">
+                                t.ex. kaffe-muggar, pappersbestick och andra
+                                typer av pappersförpackningar.
+                            </span>
+                        </div>
+                    </div>
+                    <div className="margin-y-20 line-height-extra flex">
+                        <img
+                            src={glassIcon}
+                            alt="trasigt glas"
+                            className="icon margin-right-5"
+                        />
+                        <div>
+                            <span className="bold margin-right-5 outlined">
+                                Glas
+                            </span>
+                            <span className="line-height-normal">
+                                t.ex. glasflaskor och glasburkar.
+                            </span>
+                        </div>
+                    </div>
+                    <div className="margin-y-20 line-height-extra flex">
+                        <img
+                            src={miscIcon}
+                            alt="papperskorg"
+                            className="icon margin-right-5"
+                        />
+                        <div>
+                            <span className="bold margin-right-5 outlined">
+                                Övrigt avfall
+                            </span>
+                            <span className="line-height-normal">
+                                t.ex. servetter, ciggarettfimpar och tuggumi.
+                            </span>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div className="margin-y-30">
-                <h3>Aktuellt</h3>
-                <article>
-                    <h4 className="margin-y-5">Nu kan du återvinna igen!</h4>
-                    <small>Publicerat 2 April 2018</small>
-                    <p>
-                        Nu står de olika återvinningskärlen ute på stockholms
-                        gator och stränder för iår!
-                    </p>
-                </article>
+            <div>
+                <div className="card margin-top">
+                    <h2>
+                        <p className="text-normal line-height-normal">
+                            På stationer markerade med
+                            <img
+                                src={grillIcon}
+                                alt="återvinning för engångsgrill"
+                                className="icon--small margin-left-5 vertical-sub"
+                            />
+                        </p>
+                    </h2>
+                    <div className="margin-y-20 line-height-extra flex">
+                        <img
+                            src={grillIcon}
+                            alt="grill"
+                            className="icon margin-right-5 margin-left-5"
+                        />
+                        <div>
+                            <span className="bold margin-right-5 outlined">
+                                Engångsgrillar
+                            </span>
+                            <span className="line-height-normal">
+                                i de särskilda återvinningskärlen för
+                                engångsgrillar får endast engångsgrillar
+                                slängas.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div className="margin-y-30 card">
+                    <h1 className="margin-none">Aktuellt</h1>
+                    <article>
+                        <h2 className="margin-y-5">
+                            Nu kan du återvinna igen!
+                        </h2>
+                        <small className="uppercase text-green-dark">
+                            Publicerat 2 April 2018
+                        </small>
+                        <p>
+                            Nu står de olika återvinningskärlen ute på
+                            stockholms gator och stränder för iår!
+                        </p>
+                    </article>
+                </div>
             </div>
         </div>
     );
