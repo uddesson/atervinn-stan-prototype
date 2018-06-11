@@ -91,6 +91,18 @@ nav {
     border-radius: 8px;
 }
 
+ul{
+    margin-top: 0px;
+}
+
+li{
+    color: var(--primary-green);
+    line-height: 160%;
+    margin: 2px;
+    list-style: none;
+    text-align: left;
+}
+
 /*
   Buttons
 */
@@ -138,7 +150,7 @@ input[type='submit'] {
     font-size: 0.9em;
     border: none;
     padding: 15px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     -webkit-appearance: none;
     appearance: none;
 }
