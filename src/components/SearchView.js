@@ -109,7 +109,7 @@ class SearchView extends React.Component {
                         compatible: result.compatible
                     }
                 }
-                else if(result.compatible === true){
+                else {
                     return {
                         name: result.name,
                         sortedAs: result.sortedAs + '.',
