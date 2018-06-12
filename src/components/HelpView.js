@@ -90,7 +90,7 @@ function HelpView(props) {
                 </div>
             </div>
             <div>
-                <div className="card margin-top">
+                <div className="card margin-y-30">
                     <h2>
                         <p className="text-normal line-height-normal">
                             På stationer markerade med
@@ -119,7 +119,7 @@ function HelpView(props) {
                         </div>
                     </div>
                 </div>
-                <div className="margin-y-30 card">
+                <div className="margin-last card">
                     <h1 className="margin-none">Aktuellt</h1>
                     <article>
                         <h2 className="margin-y-5">
