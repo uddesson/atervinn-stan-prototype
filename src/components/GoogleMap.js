@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
 import Marker from './Marker';
+import CurrentMarker from './CurrentMarker';
 import mapStyle from '../mapStyle.json';
+import RandomLocations from '../currentLocations.json';
 
 // Left from testsession
 class GoogleMap extends Component {
@@ -28,12 +30,17 @@ class GoogleMap extends Component {
                 key={location.text}
             />
         ));
+
+        const currentPosition =
+            RandomLocations[Math.floor(Math.random() * RandomLocations.length)];
+
         const options = {
             styles: mapStyle,
         };
+
         return (
             // Important! Always set the container height explicitly
-            <div style={{ height: '100vh', width: '100%' }}>
+            <div style={{ height: '88vh', width: '100%' }}>
                 <GoogleMapReact
                     bootstrapURLKeys={{
                         key: 'AIzaSyCT5AuY2Mf3nQ_YgE7LXakaBT_KQEDDa6U',
@@ -43,6 +50,12 @@ class GoogleMap extends Component {
                     options={options}
                 >
                     {allMarkers}
+
+                    <CurrentMarker
+                        lat={currentPosition.lat}
+                        lng={currentPosition.lng}
+                        key={currentPosition.text}
+                    />
                 </GoogleMapReact>
             </div>
         );
