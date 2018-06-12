@@ -98,7 +98,9 @@ class SearchView extends React.Component {
                     name: '',
                     noResults: `Vi hittar inga resultat som matchar din sökning.
                                 Testa något annat!`
-                }
+                },
+                showPlaceholder: false,
+                autoCompleteResults: []
             })
         }
 
