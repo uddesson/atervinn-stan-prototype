@@ -47,7 +47,6 @@ class App extends Component {
     render() {
         return (
             <React.Fragment>
-                <Header />
                 {this.state.searchView && (
                     <SearchView
                         /* Send along toggleview here as well,
@@ -58,7 +57,12 @@ class App extends Component {
                 )}
 
                 {this.state.mapView && <GoogleMap locations={locations} />}
-                {this.state.helpView && <HelpView />}
+                {this.state.helpView &&
+                    <React.Fragment>
+                        <Header />
+                        <HelpView />
+                    </React.Fragment>
+                }
 
                 <Nav
                     toggleView={this.toggleView}
