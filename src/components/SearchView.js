@@ -14,14 +14,14 @@ class SearchView extends React.Component {
             sortedAs: '',
             noResults: ''
         },
-        showActionButton: true,
         autoCompleteResults: '',
-        deactivateSearch: false
+        deactivateSearch: false,
+        showPlaceholder: true
     }
 
     handleInput = (event) => {
         let searchWord = event.target.value;
-        this.setState({ searchWord });
+        this.setState({ searchWord, searchOutput: {name: '', sortedAs: ''}});
 
         let searchWordChars = searchWord.split('');
 
@@ -29,15 +29,20 @@ class SearchView extends React.Component {
             this.autoComplete(searchWord);
         }
 
+        else if(searchWordChars.length === 0){
+            this.setState({showPlaceholder: true, autoCompleteResults: []})
+        }
+
         else {
             this.setState({
                 searchOutput: { name: '', sortedAs: '', noResults: '' },
                 autoCompleteResults: [],
                 deactivateSearch: false,
-                showActionButton: true
+                showPlaceholder: false
             })
         }
     };
+
 
     autoComplete = (searchWord) => {
         let formattedSearchWord = searchWord.toLowerCase();
@@ -84,7 +89,7 @@ class SearchView extends React.Component {
     checkForMatch = (searchWord) => {
 
         let matches = searchData.filter(function(match) {
-            return match.name === searchWord || match.capitalized === searchWord;
+            return match.name === searchWord;
         })
 
         if(matches.length === 0) {
@@ -93,8 +98,7 @@ class SearchView extends React.Component {
                     name: '',
                     noResults: `Vi hittar inga resultat som matchar din sökning.
                                 Testa något annat!`
-                },
-                showActionButton: false
+                }
             })
         }
 
@@ -109,7 +113,7 @@ class SearchView extends React.Component {
                         compatible: result.compatible
                     }
                 }
-                else if(result.compatible === true){
+                else {
                     return {
                         name: result.name,
                         sortedAs: result.sortedAs + '.',
@@ -132,17 +136,27 @@ class SearchView extends React.Component {
         }
     }
 
+    // TODO: Clean this up and split into smaller components
     render(){
         return (
-            <div className="container center line-height-extra">
+            <React.Fragment>
+                    <div className="pin"></div>
+                    <div className="pulse"></div>
+                    <Button
+                        onClick={this.props.toggleView}
+                        value={'karta'}
+                        content={'Visa närmsta station ⇾'}
+                        className={'btn__call-to-action'}
+                    />
 
-                <h1>Vad vill du återvinna?</h1>
-
-                <SearchInput
-                    handleInput={this.handleInput}
-                    searchWord={this.state.searchWord}
-                    handleSearch={this.handleSearch}
-                />
+                <div className="hero-header">
+                    <h1>Vad vill du återvinna?</h1>
+                    <SearchInput
+                        handleInput={this.handleInput}
+                        searchWord={this.state.searchWord}
+                        handleSearch={this.handleSearch}
+                    />
+                </div>
 
                 {this.state.autoCompleteResults &&
                     <AutoCompleteResults
@@ -151,8 +165,8 @@ class SearchView extends React.Component {
                     />
                 }
 
-                <div className="container-inner">
-                    <p>
+                <div className="container-inner center line-height-extra">
+                    <p className="text-green-dark">
                         {this.state.searchOutput.name !== '' &&
                             <span className="outlined capitalize">
                                 {this.state.searchOutput.name}
@@ -160,6 +174,10 @@ class SearchView extends React.Component {
                         }
 
                         {this.state.searchOutput.text}
+
+                        {this.state.showPlaceholder &&
+                            <React.Fragment>Här ska vi skriva något uppmuntrande och trevligt! Cirka såhär långt + en emoji kanske.</React.Fragment>
+                        }
 
                         <span className="success">{this.state.searchOutput.sortedAs}</span>
                         <span className="warning">{this.state.searchOutput.noResults}</span>
@@ -169,16 +187,9 @@ class SearchView extends React.Component {
                         }
                     </p>
 
-                    {this.state.showActionButton &&
-                        <Button
-                            onClick={this.props.toggleView}
-                            value={'karta'}
-                            content={'Hitta närmsta ställe'}
-                            className={'btn__call-to-action'}
-                        />
-                    }
                 </div>
-            </div>
+
+            </React.Fragment>
         )
     }
 }
