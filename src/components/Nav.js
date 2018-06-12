@@ -6,7 +6,7 @@ import HelpIcon from './HelpIcon';
 
 function Nav(props) {
     return (
-        <nav className="grid">
+        <nav className="flex">
             <Button
                 onClick={props.toggleView}
                 value={'sök'}
