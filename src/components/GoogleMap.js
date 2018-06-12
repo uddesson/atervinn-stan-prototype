@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
 import Marker from './Marker';
+import mapStyle from '../mapStyle.json';
 
 // Left from testsession
 class GoogleMap extends Component {
@@ -27,6 +28,9 @@ class GoogleMap extends Component {
                 key={location.text}
             />
         ));
+        const options = {
+            styles: mapStyle,
+        };
         return (
             // Important! Always set the container height explicitly
             <div style={{ height: '100vh', width: '100%' }}>
@@ -36,6 +40,7 @@ class GoogleMap extends Component {
                     }}
                     defaultCenter={this.props.odenplan}
                     defaultZoom={this.props.zoom}
+                    options={options}
                 >
                     {allMarkers}
                 </GoogleMapReact>
