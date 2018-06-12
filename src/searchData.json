@@ -5,6 +5,26 @@
 		"compatible": true
     },
     {
+        "name": "plastmugg",
+        "sortedAs": "plast",
+		"compatible": true
+    },
+    {
+        "name": "engångstallrik",
+        "sortedAs": "papper",
+		"compatible": true
+    },
+    {
+        "name": "vinflaska",
+        "sortedAs": "glas",
+		"compatible": true
+    },
+    {
+        "name": "bag-in-box",
+        "sortedAs": "plast och papper",
+		"compatible": true
+    },
+    {
         "name": "engångsgrill",
         "sortedAs": "engångsgrill i speciella röda sopkräl - utmärkta med en grillikon på kartan",
 		"compatible": true

@@ -11,6 +11,7 @@ function AutoCompleteResults(props){
                             key={item}
                             value={item}
                             data-txt={item}
+                            className="text-green-dark"
                         >
                             {item}
                         </li>
