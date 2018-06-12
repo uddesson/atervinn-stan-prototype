@@ -40,6 +40,8 @@ class SearchView extends React.Component {
     };
 
     autoComplete = (searchWord) => {
+        let formattedSearchWord = searchWord.toLowerCase();
+
         let data = searchData.map(function(singleData){
             return singleData.name;
         })
@@ -47,7 +49,7 @@ class SearchView extends React.Component {
         let autoCompleteResults = [];
 
         for (let name of data){
-            if(name.indexOf(searchWord) !== -1){
+            if(name.indexOf(formattedSearchWord) !== -1){
                 autoCompleteResults.push(name);
             }
         }
