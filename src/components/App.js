@@ -12,8 +12,7 @@ class App extends Component {
         mapView: false,
         searchView: true,
         helpView: false,
-        keyWord: 'sök', // Default, home screen
-        searchWord: '',
+        keyWord: 'sök' // Default, home screen
     };
 
     // TODO: Refactor
@@ -44,11 +43,6 @@ class App extends Component {
         }
     };
 
-    // Is called from SearchView -> SearchInput
-    setSeachWordToState = event => {
-        let searchWord = event.target.value;
-        this.setState({ searchWord });
-    };
 
     render() {
         return (
@@ -56,8 +50,6 @@ class App extends Component {
                 <Header />
                 {this.state.searchView && (
                     <SearchView
-                        setSeachWordToState={this.setSeachWordToState}
-                        searchWord={this.state.searchWord}
                         /* Send along toggleview here as well,
                         because there is a "Hitta närmsta" button in SearchView,
                         that is set to toggle mapView */
@@ -68,7 +60,12 @@ class App extends Component {
                 {this.state.mapView && <GoogleMap locations={locations} />}
                 {this.state.helpView && <HelpView />}
 
-                <Nav toggleView={this.toggleView} />
+                <Nav
+                    toggleView={this.toggleView}
+                    searchView={this.state.searchView}
+                    mapView={this.state.mapView}
+                    helpView={this.state.helpView}
+                />
             </React.Fragment>
         );
     }

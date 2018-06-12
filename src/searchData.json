@@ -15,6 +15,16 @@
 		"compatible": true
     },
     {
+        "name": "glasflaska",
+        "sortedAs": "glas",
+		"compatible": true
+    },
+    {
+        "name": "kaffemugg",
+        "sortedAs": "plast och papper, om det är en take away-mugg",
+		"compatible": true
+    },
+    {
         "name": "kapsyl",
         "sortedAs": "metall",
 		"compatible": false
