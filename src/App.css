@@ -12,7 +12,7 @@ html {
     --primary-green-dark: #7baa80;
     --warning: #f2784b;
     --blue: #3498db;
-    --grey: #7f7f7f;
+    --grey: #707070;
     --white-light: #ffffff;
 }
 
@@ -91,11 +91,11 @@ nav {
     border-radius: 8px;
 }
 
-ul{
+ul {
     margin-top: 0px;
 }
 
-li{
+li {
     color: var(--primary-green);
     line-height: 160%;
     margin: 2px;
