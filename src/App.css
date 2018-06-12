@@ -12,8 +12,10 @@ html {
     --primary-green-dark: #7baa80;
     --warning: #E26A6A;
     --blue: #3498db;
-    --grey: #7f7f7f;
+    --grey: #707070;
     --white-light: #ffffff;
+
+    --nav-width: 33.33333%;
 }
 
 h1,
@@ -72,6 +74,10 @@ header {
 nav {
     height: 12vh;
     min-height: 10vh;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
 }
 
 .icon--small {
@@ -91,11 +97,11 @@ nav {
     border-radius: 8px;
 }
 
-ul{
+ul {
     margin-top: 0px;
 }
 
-li{
+li {
     color: var(--primary-green);
     line-height: 160%;
     margin: 2px;
@@ -116,6 +122,7 @@ li{
 
 .btn__nav {
     background-color: var(--grey);
+    width: var(--nav-width);
 }
 
 .nav-icon {
