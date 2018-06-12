@@ -1,9 +1,9 @@
 import React from 'react';
-import SearchInput from './SearchInput';
-import Button from './Button';
+import HeroHeader from './HeroHeader';
 import searchData from '../searchData.json';
-import miscIcon from '../icons/icons8-disposal-80.png';
+import ShowNearestButton from './ShowNearestButton';
 import AutoCompleteResults from './AutoCompleteResults';
+import SearchOutput from './SearchOutput';
 
 class SearchView extends React.Component {
 
@@ -136,27 +136,19 @@ class SearchView extends React.Component {
         }
     }
 
-    // TODO: Clean this up and split into smaller components
     render(){
         return (
             <React.Fragment>
-                    <div className="pin"></div>
-                    <div className="pulse"></div>
-                    <Button
-                        onClick={this.props.toggleView}
-                        value={'karta'}
-                        content={'Visa närmsta station ⇾'}
-                        className={'btn__call-to-action'}
-                    />
 
-                <div className="hero-header">
-                    <h1>Vad vill du återvinna?</h1>
-                    <SearchInput
-                        handleInput={this.handleInput}
-                        searchWord={this.state.searchWord}
-                        handleSearch={this.handleSearch}
-                    />
-                </div>
+                <ShowNearestButton
+                    toggleView={this.props.toggleView}
+                />
+
+                <HeroHeader
+                    handleInput={this.handleInput}
+                    searchWord={this.state.searchWord}
+                    handleSearch={this.handleSearch}
+                />
 
                 {this.state.autoCompleteResults &&
                     <AutoCompleteResults
@@ -166,27 +158,13 @@ class SearchView extends React.Component {
                 }
 
                 <div className="container-inner center line-height-extra">
-                    <p className="text-green-dark">
-                        {this.state.searchOutput.name !== '' &&
-                            <span className="outlined capitalize">
-                                {this.state.searchOutput.name}
-                            </span>
-                        }
-
-                        {this.state.searchOutput.text}
-
-                        {this.state.showPlaceholder &&
-                            <React.Fragment>Här ska vi skriva något uppmuntrande och trevligt! Cirka såhär långt + en emoji kanske.</React.Fragment>
-                        }
-
-                        <span className="success">{this.state.searchOutput.sortedAs}</span>
-                        <span className="warning">{this.state.searchOutput.noResults}</span>
-
-                        {this.state.searchOutput.noResults &&
-                            <img src={miscIcon} alt="Papperskorg" className="block center"></img>
-                        }
-                    </p>
-
+                    <SearchOutput
+                        nameOfObject={this.state.searchOutput.name}
+                        textAttatchment={this.state.searchOutput.text}
+                        placeholder={this.state.showPlaceholder}
+                        sortedAs={this.state.searchOutput.sortedAs}
+                        noResults={this.state.searchOutput.noResults}
+                    />
                 </div>
 
             </React.Fragment>
