@@ -18,7 +18,7 @@ function Nav(props) {
                     />
                 }
                 content={'Sök'}
-                className={`btn border-none btn__nav ${
+                className={`btn border-none btn__nav margin-none ${
                     props.searchView ? 'active bold' : 'text-white'
                 }`}
             />
@@ -34,7 +34,7 @@ function Nav(props) {
                     />
                 }
                 content={'Karta'}
-                className={`btn border-none btn__nav ${
+                className={`btn border-none btn__nav margin-none ${
                     props.mapView ? 'active bold' : 'text-white'
                 }`}
             />
@@ -45,7 +45,7 @@ function Nav(props) {
                 type={'nav'}
                 icon={<HelpIcon helpView={props.helpView} />}
                 content={'Hjälp'}
-                className={`btn border-none btn__nav ${
+                className={`btn border-none btn__nav margin-none ${
                     props.helpView ? 'active bold' : 'text-white'
                 }`}
             />
