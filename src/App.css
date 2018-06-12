@@ -53,12 +53,20 @@ header {
     margin: 20px auto 10px auto;
 }
 
-.grid {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-column-gap: 0px;
+.hero-header{
+    background-image: url("./images/city.jpg");
+    min-height: 250px;
+    line-height: 1.3;
+    padding: 30px 30px 10px 30px;
+    color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    margin-bottom: 10px;
+}
+
+.hero-header>h1{
+    margin-bottom: 0px;
 }
 
 .container {
