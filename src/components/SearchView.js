@@ -15,7 +15,8 @@ class SearchView extends React.Component {
             noResults: ''
         },
         showActionButton: true,
-        autoCompleteResults: ''
+        autoCompleteResults: '',
+        deactivateSearch: false
     }
 
     handleInput = (event) => {
@@ -27,8 +28,14 @@ class SearchView extends React.Component {
         if(searchWordChars.length >= 3){
             this.autoComplete(searchWord);
         }
+
         else {
-            this.setState({autoCompleteResults: []})
+            this.setState({
+                searchOutput: { name: '', sortedAs: '', noResults: '' },
+                autoCompleteResults: [],
+                deactivateSearch: false,
+                showActionButton: true
+            })
         }
     };
 
@@ -45,12 +52,22 @@ class SearchView extends React.Component {
             }
         }
 
-        this.setState({autoCompleteResults})
+        this.setState({autoCompleteResults, deactivateSearch: true})
+
+        if(this.state.autoCompleteResults.length === 0){
+            this.setState({deactivateSearch: false})
+        }
     }
 
     handleSearch = (event) => {
         event.preventDefault();
-        this.checkForMatch(this.state.searchWord);
+        if(this.state.deactivateSearch === true){
+            // Stop the search-button from doing anything
+            return;
+        } else {
+            // Actually search
+            this.checkForMatch(this.state.searchWord);
+        }
     }
 
     handleAutoCompleteSearch = (event) => {
@@ -63,15 +80,17 @@ class SearchView extends React.Component {
     }
 
     checkForMatch = (searchWord) => {
+
         let matches = searchData.filter(function(match) {
-            return match.name === searchWord;
+            return match.name === searchWord || match.capitalized === searchWord;
         })
 
         if(matches.length === 0) {
             this.setState({
                 searchOutput: {
                     name: '',
-                    noResults: 'Vi hittar inga resultat som matchar din sökning. Testa något annat!'
+                    noResults: `Vi hittar inga resultat som matchar din sökning.
+                                Testa något annat!`
                 },
                 showActionButton: false
             })
@@ -83,7 +102,8 @@ class SearchView extends React.Component {
                     return {
                         name: result.name,
                         sortedAs: result.sortedAs + '.',
-                        text: ' kan inte återvinnas i stan. Sorteras på en återvinningscentral som ',
+                        text: ` kan inte återvinnas på en station i stan.
+                                Det ska sorteras på en återvinningscentral som `,
                         compatible: result.compatible
                     }
                 }
@@ -91,7 +111,7 @@ class SearchView extends React.Component {
                     return {
                         name: result.name,
                         sortedAs: result.sortedAs + '.',
-                        text: ' kan återvinnas i stan. Sorteras som ',
+                        text: ` kan återvinnas i stan. Sorteras som `,
                         compatible: result.compatible
                     }
                 }
@@ -114,7 +134,7 @@ class SearchView extends React.Component {
         return (
             <div className="container center line-height-extra">
 
-                <h2>Vad vill du återvinna?</h2>
+                <h1>Vad vill du återvinna?</h1>
 
                 <SearchInput
                     handleInput={this.handleInput}
@@ -143,7 +163,7 @@ class SearchView extends React.Component {
                         <span className="warning">{this.state.searchOutput.noResults}</span>
 
                         {this.state.searchOutput.noResults &&
-                            <img src={miscIcon} alt="Papperskorg" className="margin-y-5"></img>
+                            <img src={miscIcon} alt="Papperskorg" className="block center"></img>
                         }
                     </p>
 

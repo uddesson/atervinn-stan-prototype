@@ -10,7 +10,7 @@ html {
     --primary-green: #9ac89f;
     --primary-green-light: #b6e6bc;
     --primary-green-dark: #7baa80;
-    --warning: #f2784b;
+    --warning: #E26A6A;
     --blue: #3498db;
     --grey: #707070;
     --white-light: #ffffff;
@@ -68,7 +68,7 @@ header {
 }
 
 .container-inner {
-    padding: 30px;
+    padding: 10px 30px 30px 30px;
 }
 
 nav {
@@ -92,8 +92,8 @@ nav {
 
 .outlined {
     padding: 5px;
-    border: 2px solid var(--primary-green);
-    color: var(--primary-green);
+    border: 2px solid var(--primary-green-dark);
+    color: var(--primary-green-dark);
     border-radius: 8px;
 }
 
@@ -189,6 +189,10 @@ input[type='submit'] {
 .center {
     text-align: center;
     margin: 0 auto 0 auto;
+}
+
+.block{
+    display: block;
 }
 
 .bold {
