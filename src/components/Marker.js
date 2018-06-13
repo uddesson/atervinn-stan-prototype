@@ -10,7 +10,7 @@ function Marker(props) {
             lng={props.lng}
         >
             <img
-                className="marker__icon"
+                className="marker__icon marker__icon--normal"
                 src={
                     props.type === 'allmän återvinning'
                         ? RecyclingIcon
@@ -21,7 +21,6 @@ function Marker(props) {
                         ? 'allmän återvinning'
                         : 'återvinning för engångsgrill'
                 }
-                style={{ height: '30px', width: '30px', alignSelf: 'center' }}
             />
         </div>
     );

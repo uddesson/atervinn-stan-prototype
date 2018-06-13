@@ -11,10 +11,8 @@ function HelpView() {
     return (
         <div className="container">
             <div className="card">
-                <h1 className="margin-none line-height-normal">
-                    Symbolförklaring
-                </h1>
-                <p className="margin-none">
+                <h1 className="margin-none">Symbolförklaring</h1>
+                <p className="margin-none line-height-medium">
                     På kartan finns två typer av markeringar som representerar
                     olika stationer. Nedan beskrivs vad du kan återvinna på
                     respektive station.
@@ -24,7 +22,7 @@ function HelpView() {
                         På stationer märkta med
                         <div className="marker marker--small inline margin-x-5">
                             <img
-                                className="icon--small marker__icon"
+                                className="icon--small marker__icon--small marker__icon"
                                 src={RecyclingIcon}
                             />
                         </div>
