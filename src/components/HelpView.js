@@ -133,7 +133,7 @@ function HelpView(props) {
                         </small>
                         <p>
                             Nu står de olika återvinningskärlen ute på
-                            stockholms gator och stränder för iår!
+                            stockholms gator och stränder för i år!
                         </p>
                     </article>
                 </div>
