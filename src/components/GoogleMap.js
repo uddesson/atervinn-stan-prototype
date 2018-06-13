@@ -1,20 +1,13 @@
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
 import Marker from './Marker';
+import CurrentMarker from './CurrentMarker';
+import mapStyle from '../mapStyle.json';
 
-// Left from testsession
 class GoogleMap extends Component {
     static defaultProps = {
-        center: {
-            lat: 59.95,
-            lng: 30.33,
-        },
-        odenplan: {
-            lat: 59.34,
-            lng: 18.04,
-        },
         locations: [],
-        zoom: 12,
+        zoom: 14,
     };
 
     render() {
@@ -27,17 +20,29 @@ class GoogleMap extends Component {
                 key={location.text}
             />
         ));
+
+        const options = {
+            styles: mapStyle,
+        };
+
         return (
             // Important! Always set the container height explicitly
-            <div style={{ height: '76vh', width: '100%' }}>
+            <div style={{ height: '88vh', width: '100%' }}>
                 <GoogleMapReact
                     bootstrapURLKeys={{
                         key: 'AIzaSyCT5AuY2Mf3nQ_YgE7LXakaBT_KQEDDa6U',
                     }}
-                    defaultCenter={this.props.odenplan}
+                    defaultCenter={this.props.currentPosition}
                     defaultZoom={this.props.zoom}
+                    options={options}
                 >
                     {allMarkers}
+
+                    <CurrentMarker
+                        lat={this.props.currentPosition.lat}
+                        lng={this.props.currentPosition.lng}
+                        key={this.props.currentPosition.text}
+                    />
                 </GoogleMapReact>
             </div>
         );

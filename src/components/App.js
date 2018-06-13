@@ -6,6 +6,7 @@ import HelpView from './HelpView';
 import SearchView from './SearchView';
 import Header from './Header';
 import locations from '../locations.json';
+import RandomLocations from '../currentLocations.json';
 
 class App extends Component {
     state = {
@@ -45,9 +46,11 @@ class App extends Component {
 
 
     render() {
+
+        const currentPosition = RandomLocations[Math.floor(Math.random() * RandomLocations.length)];
+
         return (
             <React.Fragment>
-                <Header />
                 {this.state.searchView && (
                     <SearchView
                         /* Send along toggleview here as well,
@@ -57,8 +60,19 @@ class App extends Component {
                     />
                 )}
 
-                {this.state.mapView && <GoogleMap locations={locations} />}
-                {this.state.helpView && <HelpView />}
+                {this.state.mapView &&
+                    <GoogleMap
+                        locations={locations}
+                        currentPosition={currentPosition}
+                    />
+                }
+
+                {this.state.helpView &&
+                    <React.Fragment>
+                        <Header />
+                        <HelpView />
+                    </React.Fragment>
+                }
 
                 <Nav
                     toggleView={this.toggleView}
@@ -66,6 +80,7 @@ class App extends Component {
                     mapView={this.state.mapView}
                     helpView={this.state.helpView}
                 />
+
             </React.Fragment>
         );
     }

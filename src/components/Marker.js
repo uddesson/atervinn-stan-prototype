@@ -1,22 +1,12 @@
 import React from 'react';
-import RecyclingIcon from '../icons/icons8-recycling-80.png';
-import GrillIcon from '../icons/icons8-grill-80.png';
+import RecyclingIcon from '../icons/icons8-recycling-96.png';
+import GrillIcon from '../icons/icons8-grill-filled-80.png';
 
 function Marker(props) {
     return (
-        <div
-            style={{
-                width: '30px',
-                height: '30px',
-                backgroundColor: '#F8FAFC',
-                display: 'flex',
-                justifyContent: 'center',
-                borderRadius: '0.25rem',
-            }}
-            lat={props.lat}
-            lng={props.lng}
-        >
+        <div className="marker marker--fixed" lat={props.lat} lng={props.lng}>
             <img
+                className="marker__icon"
                 src={
                     props.type === 'allmän återvinning'
                         ? RecyclingIcon
@@ -27,7 +17,7 @@ function Marker(props) {
                         ? 'allmän återvinning'
                         : 'återvinning för engångsgrill'
                 }
-                style={{ height: '20px', width: '20px', alignSelf: 'center' }}
+                style={{ height: '30px', width: '30px', alignSelf: 'center' }}
             />
         </div>
     );

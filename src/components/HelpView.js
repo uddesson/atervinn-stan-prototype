@@ -3,8 +3,9 @@ import plasticIcon from '../icons/icons8-plastic-80.png';
 import paperIcon from '../icons/icons8-coffee-to-go-80.png';
 import miscIcon from '../icons/icons8-disposal-80.png';
 import glassIcon from '../icons/icons8-fragile-80.png';
-import recyclingIcon from '../icons/icons8-recycling-80.png';
-import grillIcon from '../icons/icons8-grill-80.png';
+import RecyclingIcon from '../icons/icons8-recycling-96.png';
+import GrillIconWhite from '../icons/icons8-grill-filled-80.png';
+import grillIconColor from '../icons/icons8-grill-80.png';
 
 function HelpView(props) {
     return (
@@ -17,11 +18,12 @@ function HelpView(props) {
                     <h2 className="margin-none">
                         <p className="text-normal line-height-normal">
                             På stationer markerade med
-                            <img
-                                src={recyclingIcon}
-                                alt="allmän återvinning"
-                                className="icon--small margin-left-5 margin-right-5 vertical-sub"
-                            />
+                            <div className="marker inline margin-x-5">
+                                <img
+                                    className="icon marker__icon"
+                                    src={RecyclingIcon}
+                                />
+                            </div>
                             kan du slänga följande
                         </p>
                     </h2>
@@ -90,20 +92,21 @@ function HelpView(props) {
                 </div>
             </div>
             <div>
-                <div className="card margin-top">
+                <div className="card margin-y-30">
                     <h2>
-                        <p className="text-normal line-height-normal">
+                        <p className="text-normal line-height-normal inline">
                             På stationer markerade med
-                            <img
-                                src={grillIcon}
-                                alt="återvinning för engångsgrill"
-                                className="icon--small margin-left-5 vertical-sub"
-                            />
                         </p>
+                        <div className="marker inline margin-x-5">
+                            <img
+                                className="icon marker__icon"
+                                src={GrillIconWhite}
+                            />
+                        </div>
                     </h2>
                     <div className="margin-y-20 line-height-extra flex">
                         <img
-                            src={grillIcon}
+                            src={grillIconColor}
                             alt="grill"
                             className="icon margin-right-5 margin-left-5"
                         />
@@ -119,7 +122,7 @@ function HelpView(props) {
                         </div>
                     </div>
                 </div>
-                <div className="margin-y-30 card">
+                <div className="margin-last card">
                     <h1 className="margin-none">Aktuellt</h1>
                     <article>
                         <h2 className="margin-y-5">
