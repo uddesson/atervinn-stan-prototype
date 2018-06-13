@@ -285,7 +285,7 @@ input[type='submit'] {
 }
 
 .line-height-extra {
-    line-height: 200%;
+    line-height: 190%;
 }
 
 .warning {
@@ -329,7 +329,7 @@ input[type='submit'] {
 }
 
 .text-normal {
-    font-size: 1rem;
+    font-size: 1.2em;
 }
 
 .vertical-sub {

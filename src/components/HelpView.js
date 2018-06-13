@@ -131,7 +131,7 @@ function HelpView() {
                         <small className="uppercase text-green-dark">
                             Publicerat 2 April 2018
                         </small>
-                        <p>
+                        <p className="line-height-medium">
                             Nu står de olika återvinningskärlen ute på
                             stockholms gator och stränder för i år!
                         </p>
