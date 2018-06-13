@@ -3,21 +3,11 @@ import GoogleMapReact from 'google-map-react';
 import Marker from './Marker';
 import CurrentMarker from './CurrentMarker';
 import mapStyle from '../mapStyle.json';
-import RandomLocations from '../currentLocations.json';
 
-// Left from testsession
 class GoogleMap extends Component {
     static defaultProps = {
-        center: {
-            lat: 59.95,
-            lng: 30.33,
-        },
-        odenplan: {
-            lat: 59.34,
-            lng: 18.04,
-        },
         locations: [],
-        zoom: 12,
+        zoom: 14,
     };
 
     render() {
@@ -31,9 +21,6 @@ class GoogleMap extends Component {
             />
         ));
 
-        const currentPosition =
-            RandomLocations[Math.floor(Math.random() * RandomLocations.length)];
-
         const options = {
             styles: mapStyle,
         };
@@ -45,16 +32,16 @@ class GoogleMap extends Component {
                     bootstrapURLKeys={{
                         key: 'AIzaSyCT5AuY2Mf3nQ_YgE7LXakaBT_KQEDDa6U',
                     }}
-                    defaultCenter={this.props.odenplan}
+                    defaultCenter={this.props.currentPosition}
                     defaultZoom={this.props.zoom}
                     options={options}
                 >
                     {allMarkers}
 
                     <CurrentMarker
-                        lat={currentPosition.lat}
-                        lng={currentPosition.lng}
-                        key={currentPosition.text}
+                        lat={this.props.currentPosition.lat}
+                        lng={this.props.currentPosition.lng}
+                        key={this.props.currentPosition.text}
                     />
                 </GoogleMapReact>
             </div>
