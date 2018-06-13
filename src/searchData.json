@@ -53,5 +53,70 @@
         "name": "tändvätska",
         "sortedAs": "miljöfarligt avfall",
 		"compatible": false
+    },
+    {
+        "name": "servett",
+        "sortedAs": "övrigt avfall",
+		"compatible": true
+    },
+    {
+        "name": "ciggarettfimp",
+        "sortedAs": "övrigt avfall",
+		"compatible": true
+    },
+    {
+        "name": "papperspåse",
+        "sortedAs": "papper",
+		"compatible": true
+    },
+    {
+        "name": "ciggarettpaket",
+        "sortedAs": "papper",
+		"compatible": true
+    },
+    {
+        "name": "papptallrik",
+        "sortedAs": "papper",
+		"compatible": true
+    },
+    {
+        "name": "pizzakartong",
+        "sortedAs": "papper",
+		"compatible": true
+    },
+    {
+        "name": "vintetra",
+        "sortedAs": "papper",
+		"compatible": true
+    },
+    {
+        "name": "öl- och läsktråg (plast runt flerpack)",
+        "sortedAs": "plast",
+		"compatible": true
+    },
+    {
+        "name": "tidning",
+        "sortedAs": "tidning/Returpapper",
+		"compatible": false
+    },
+    {
+        "name": "reklambroschyr",
+        "sortedAs": "tidning/Returpapper",
+		"compatible": false
+    },
+    {
+        "name": "glasspinne",
+        "sortedAs": "övrigt avfall",
+		"compatible": true
+    },
+    {
+        "name": "tändare",
+        "sortedAs": "farligt avfall",
+		"compatible": false
+    },
+    {
+        "name": "vinkork",
+        "sortedAs": "övrigt avfall",
+		"compatible": true
     }
 ]
