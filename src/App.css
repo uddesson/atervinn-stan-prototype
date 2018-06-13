@@ -340,9 +340,17 @@ input[type='submit'] {
     position: absolute;
 }
 
-.marker {
+.marker--normal {
     width: 40px;
     height: 40px;
+}
+
+.marker--small {
+    width: 30px;
+    height: 30px;
+}
+
+.marker {
     border-radius: 50% 50% 50% 0;
     transform: rotate(-45deg);
     margin: -20px 0 0 -20px;

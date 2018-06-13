@@ -4,7 +4,11 @@ import GrillIcon from '../icons/icons8-grill-filled-80.png';
 
 function Marker(props) {
     return (
-        <div className="marker marker--fixed" lat={props.lat} lng={props.lng}>
+        <div
+            className="marker marker--normal marker--fixed"
+            lat={props.lat}
+            lng={props.lng}
+        >
             <img
                 className="marker__icon"
                 src={
