@@ -11,12 +11,7 @@ function HelpView() {
     return (
         <div className="container">
             <div className="card">
-                <h1 className="margin-none">Symbolförklaring</h1>
-                <p className="margin-none line-height-medium">
-                    På kartan finns två typer av markeringar som representerar
-                    olika stationer. Nedan beskrivs vad du kan återvinna på
-                    respektive station.
-                </p>
+                <h1 className="margin-none">Symbolförklaringar</h1>
                 <div className="margin-y-20">
                     <h2 className="margin-none line-height-normal text-normal bold">
                         På stationer märkta med
@@ -26,7 +21,7 @@ function HelpView() {
                                 src={RecyclingIcon}
                             />
                         </div>
-                        kan du återvinna följande.
+                        kan du återvinna följande:
                     </h2>
                     <div className="margin-y-20 line-height-extra flex">
                         <img
@@ -55,7 +50,7 @@ function HelpView() {
                                 Papper
                             </span>
                             <span className="line-height-normal">
-                                t.ex. kaffe-muggar, pappersbestick och andra
+                                t.ex. kaffemuggar, pappersbestick och andra
                                 typer av pappersförpackningar.
                             </span>
                         </div>
@@ -86,7 +81,7 @@ function HelpView() {
                                 Övrigt avfall
                             </span>
                             <span className="line-height-normal">
-                                t.ex. servetter, ciggarettfimpar och tuggumi.
+                                t.ex. servetter, ciggarettfimpar och tuggummi.
                             </span>
                         </div>
                     </div>
@@ -102,7 +97,7 @@ function HelpView() {
                                 src={GrillIconWhite}
                             />
                         </div>
-                        kan du återvända följande.
+                        kan du återvända följande:
                     </h2>
                     <div className="margin-y-20 line-height-extra flex">
                         <img
