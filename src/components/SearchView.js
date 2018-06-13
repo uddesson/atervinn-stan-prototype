@@ -25,7 +25,7 @@ class SearchView extends React.Component {
 
         let searchWordChars = searchWord.split('');
 
-        if(searchWordChars.length >= 3){
+        if(searchWordChars.length >= 2){
             this.autoComplete(searchWord);
         }
 
@@ -59,10 +59,14 @@ class SearchView extends React.Component {
             }
         }
 
-        this.setState({autoCompleteResults, deactivateSearch: true})
+        this.setState({autoCompleteResults})
 
-        if(this.state.autoCompleteResults.length === 0){
-            this.setState({deactivateSearch: false})
+        if(autoCompleteResults.length === 0){
+            console.log('0 autocomplete')
+            this.setState({autoCompleteResults, deactivateSearch: false})
+        }
+        else{
+            this.setState({autoCompleteResults, deactivateSearch: true})
         }
     }
 

@@ -7,25 +7,26 @@ import RecyclingIcon from '../icons/icons8-recycling-96.png';
 import GrillIconWhite from '../icons/icons8-grill-filled-80.png';
 import grillIconColor from '../icons/icons8-grill-80.png';
 
-function HelpView(props) {
+function HelpView() {
     return (
         <div className="container">
             <div className="card">
-                <h1 className="margin-none line-height-normal">
-                    Symbolförklaring
-                </h1>
-                <div>
-                    <h2 className="margin-none">
-                        <p className="text-normal line-height-normal">
-                            På stationer markerade med
-                            <div className="marker inline margin-x-5">
-                                <img
-                                    className="icon marker__icon"
-                                    src={RecyclingIcon}
-                                />
-                            </div>
-                            kan du slänga följande
-                        </p>
+                <h1 className="margin-none">Symbolförklaring</h1>
+                <p className="margin-none line-height-medium">
+                    På kartan finns två typer av markeringar som representerar
+                    olika stationer. Nedan beskrivs vad du kan återvinna på
+                    respektive station.
+                </p>
+                <div className="margin-y-20">
+                    <h2 className="margin-none line-height-normal text-normal bold">
+                        På stationer märkta med
+                        <div className="marker marker--small inline margin-x-5">
+                            <img
+                                className="icon--small marker__icon--small marker__icon"
+                                src={RecyclingIcon}
+                            />
+                        </div>
+                        kan du återvinna följande.
                     </h2>
                     <div className="margin-y-20 line-height-extra flex">
                         <img
@@ -93,16 +94,15 @@ function HelpView(props) {
             </div>
             <div>
                 <div className="card margin-y-30">
-                    <h2>
-                        <p className="text-normal line-height-normal inline">
-                            På stationer markerade med
-                        </p>
-                        <div className="marker inline margin-x-5">
+                    <h2 className="text-normal line-height-normal bold">
+                        På Stationer märkta med
+                        <div className="marker marker--small inline margin-x-5">
                             <img
-                                className="icon marker__icon"
+                                className="icon--small marker__icon"
                                 src={GrillIconWhite}
                             />
                         </div>
+                        kan du återvända följande.
                     </h2>
                     <div className="margin-y-20 line-height-extra flex">
                         <img
@@ -133,7 +133,7 @@ function HelpView(props) {
                         </small>
                         <p>
                             Nu står de olika återvinningskärlen ute på
-                            stockholms gator och stränder för iår!
+                            stockholms gator och stränder för i år!
                         </p>
                     </article>
                 </div>
