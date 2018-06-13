@@ -75,7 +75,7 @@ header {
 }
 
 .container-inner {
-    min-height: 300px;
+    min-height: 60vh;
     padding: 10px 30px 30px 30px;
 }
 
@@ -109,11 +109,16 @@ ul {
 }
 
 li {
-    color: var(--primary-green);
-    line-height: 160%;
-    margin: 2px;
-    list-style: none;
+    color: var(--primary-green-dark);
+    line-height: 2.3;
+    margin-left: 20px;
     text-align: left;
+    font-size: 1.1em;
+    list-style: circle;
+}
+
+li:focus, li:hover{
+    color: var(--primary-green-dark);
 }
 
 /*
