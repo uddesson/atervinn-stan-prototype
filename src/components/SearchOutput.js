@@ -1,7 +1,7 @@
 
 import React from 'react';
 import Placeholder from './Placeholder';
-import miscIcon from '../icons/icons8-disposal-80.png';
+import NoResultsIcon from '../icons/icons8-clear-search-80.png';
 
 function SearchOutput(props){
     return(
@@ -22,7 +22,7 @@ function SearchOutput(props){
             <span className="warning">{props.noResults}</span>
 
             {props.noResults &&
-                <img src={miscIcon} alt="Papperskorg" className="block center"></img>
+                <img src={NoResultsIcon} alt="Papperskorg" className="icon-medium margin-top-large block center"></img>
             }
         </p>
     );

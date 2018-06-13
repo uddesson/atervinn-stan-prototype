@@ -236,6 +236,11 @@ input[type='submit'] {
     margin-top: 5px;
 }
 
+
+.margin-top-large {
+    margin-top: 15px;
+}
+
 .margin-y-30 {
     margin: 30px 0px;
 }
