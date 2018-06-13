@@ -75,6 +75,7 @@ header {
 }
 
 .container-inner {
+    font-size: 1.1em;
     min-height: 60vh;
     padding: 10px 30px 30px 30px;
 }
