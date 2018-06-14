@@ -4,6 +4,8 @@ Prototype for a mobile app called Återvinn Stan. The purpose of the app is to m
 
 A map shows you to your nearest city-recycle-station, and a search function will help you know how to sort your garbage if you're uncertain. There is also additional info and news in the Help-section.
 
+The app was inspired by an [initiative by Stockolms Stad](http://www.stockholm.se/ByggBo/Avfall-och-atervinning/kallsortering/), who in recent years has made an effort to make people recycle in public areas.
+
 
 ### Resources
 
@@ -15,6 +17,6 @@ A map shows you to your nearest city-recycle-station, and a search function will
 * Download or clone this repository
 * Run npm install
 
-##### Note
+### Note
 
 Since the prototype is meant for only a mobile device, desktop and tablet-displays have not been considered. We recommended you look at it within a minimized browser window or on your phone.
