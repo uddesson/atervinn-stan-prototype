@@ -163,7 +163,7 @@ class SearchView extends React.Component {
                     />
                 }
 
-                <div className="container-inner center line-height-extra">
+                <div className="container-inner line-height-extra">
                     <SearchOutput
                         nameOfObject={this.state.searchOutput.name}
                         textAttatchment={this.state.searchOutput.text}
