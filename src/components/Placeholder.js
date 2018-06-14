@@ -3,13 +3,15 @@ import HeartIcon from '../icons/basic_elaboration_message_heart.svg';
 
 function Placeholder() {
     return (
-        <div className="flex">
-            <p className="margin-none">
+        <React.Fragment>
             Återvinn skräpet efter din snabblunch, fikapaus eller picknick.
             Snabbt och smidigt – mitt i stan!
-            </p>
-            <img className="align-baseline" src={HeartIcon} alt="Ett hjärta i en pratbubbla" />
-        </div>
+            <img
+                className="margin-top-large center block"
+                src={HeartIcon}
+                alt="Ett hjärta i en pratbubbla"
+            />
+        </React.Fragment>
     );
 }
 
