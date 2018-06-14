@@ -21,7 +21,7 @@ function SearchOutput(props) {
             {props.noResults && (
                 <img
                     src={NoResultsIcon}
-                    alt="Papperskorg"
+                    alt="En ledsen smiley i en pratbubbla"
                     className="icon-medium margin-top-large block center"
                 />
             )}
