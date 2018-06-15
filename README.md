@@ -11,6 +11,7 @@ The app was inspired by an [initiative by Stockolms Stad](http://www.stockholm.s
 
 * [Google Map React](https://github.com/google-map-react/google-map-react)
 * Bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+* Icons from [Icons8](https://icons8.com) and [Linea](http://www.linea.io).
 
 ### Installation
 
