@@ -50,7 +50,7 @@ class App extends Component {
         const currentPosition = RandomLocations[Math.floor(Math.random() * RandomLocations.length)];
 
         return (
-            <React.Fragment>
+            <div className="container-outer">
                 {this.state.searchView && (
                     <SearchView
                         /* Send along toggleview here as well,
@@ -81,7 +81,7 @@ class App extends Component {
                     helpView={this.state.helpView}
                 />
 
-            </React.Fragment>
+            </div>
         );
     }
 }
