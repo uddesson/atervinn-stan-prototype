@@ -13,7 +13,7 @@ function SearchOutput(props) {
 
             {props.textAttatchment}
 
-            {props.placeholder && <Placeholder />}
+            {props.placeholder && <Placeholder toggleView={props.toggleView} />}
 
             <span className="success">{props.sortedAs}</span>
             <span className="warning">{props.noResults}</span>

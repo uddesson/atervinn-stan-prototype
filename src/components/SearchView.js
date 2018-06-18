@@ -152,6 +152,7 @@ class SearchView extends React.Component {
                 <div className="container-inner center line-height-extra">
                     <SearchOutput
                         nameOfObject={this.state.searchOutput.name}
+                        toggleView={this.props.toggleView}
                         textAttatchment={this.state.searchOutput.text}
                         placeholder={this.state.showPlaceholder}
                         sortedAs={this.state.searchOutput.sortedAs}

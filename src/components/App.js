@@ -19,9 +19,11 @@ class App extends Component {
     // TODO: Refactor
     toggleView = event => {
         let keyWord = event.target.value;
+        let alternativeKey = event.target.dataset.txt;
+
         this.setState({ keyWord });
 
-        if (keyWord === 'karta') {
+        if (keyWord === 'karta' || alternativeKey === 'karta') {
             this.setState({
                 mapView: true,
                 helpView: false,
