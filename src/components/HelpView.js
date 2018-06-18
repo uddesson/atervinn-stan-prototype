@@ -19,6 +19,7 @@ function HelpView() {
                             <img
                                 className="icon--small marker__icon--small marker__icon"
                                 src={RecyclingIcon}
+                                alt="allmän återvinning"
                             />
                         </div>
                         kan du återvinna följande:
@@ -95,6 +96,7 @@ function HelpView() {
                             <img
                                 className="icon--small marker__icon"
                                 src={GrillIconWhite}
+                                alt="återvinning för engångsgrill"
                             />
                         </div>
                         kan du återvända följande:

@@ -5,7 +5,6 @@ General
 html {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
 
     --primary-green: #9ac89f;
     --primary-green-light: #b6e6bc;
@@ -15,7 +14,13 @@ html {
     --grey: #555760;
     --white-light: #ffffff;
 
-    --nav-width: 33.33333%;
+    /* --nav-width: 33.33333%; */
+}
+
+#root{
+    background-color: var(--primary-green);
+    min-height: 100vh;
+    /* overflow: hidden; */
 }
 
 h1,
@@ -74,14 +79,21 @@ header {
     padding: 15px;
 }
 
+.container-outer {
+    position: relative;
+    background-image: -webkit-linear-gradient(330deg, #fdfbfb 0%, #ebedee 100%);
+    background-image: -o-linear-gradient(330deg, #fdfbfb 0%, #ebedee 100%);
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+}
+
 .container-inner {
-    font-size: 1.1em;
     min-height: 60vh;
+    font-size: 1.1em;
     padding: 10px 30px 30px 30px;
 }
 
 .map {
-    height: 88vh;
+    height: 90vh;
     width: 100%;
 }
 
@@ -91,6 +103,14 @@ nav {
     bottom: 0;
     right: 0;
     width: 100%;
+}
+
+.btn__nav {
+    padding: 14px 10px;
+    font-size: 0.9em;
+    background-color: var(--grey);
+    width: var(--nav-width);
+    flex: 1;
 }
 
 .icon--small {
@@ -136,14 +156,8 @@ li:hover {
     padding: 5px;
     border-radius: 0px;
     -webkit-appearance: none;
-    appearance: none;
-}
-
-.btn__nav {
-    padding: 14px 10px;
-    font-size: 0.9em;
-    background-color: var(--grey);
-    width: var(--nav-width);
+    -moz-appearance: none;
+         appearance: none;
 }
 
 .nav-icon {
@@ -152,15 +166,26 @@ li:hover {
 }
 
 .btn__call-to-action {
-    width: 100vw;
+    width: 100%;
     border: none;
     color: white;
     font-size: 0.9em;
     -webkit-appearance: none;
-    appearance: none;
+    -moz-appearance: none;
+         appearance: none;
     height: 70px;
     padding: 10px 30px;
     color: white;
+    background-image: -webkit-linear-gradient(
+        30deg,
+        var(--blue) 0%,
+        var(--primary-green-light) 100%
+    );
+    background-image: -o-linear-gradient(
+        30deg,
+        var(--blue) 0%,
+        var(--primary-green-light) 100%
+    );
     background-image: linear-gradient(
         60deg,
         var(--blue) 0%,
@@ -188,7 +213,8 @@ input[type='submit'] {
     padding: 15px;
     margin-bottom: 10px;
     -webkit-appearance: none;
-    appearance: none;
+    -moz-appearance: none;
+         appearance: none;
 }
 
 input[type='text'] {
@@ -342,11 +368,14 @@ input[type='submit'] {
 }
 
 .flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
 .align-baseline {
-    align-self: baseline;
+    -ms-flex-item-align: baseline;
+        align-self: baseline;
 }
 
 .inline {
@@ -355,8 +384,12 @@ input[type='submit'] {
 
 .marker {
     border-radius: 50% 50% 50% 0;
-    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
     margin: -20px 0 0 -20px;
+    background-image: -webkit-linear-gradient(30deg, #64b3f4 0%, #c2e59c 100%);
+    background-image: -o-linear-gradient(30deg, #64b3f4 0%, #c2e59c 100%);
     background-image: linear-gradient(60deg, #64b3f4 0%, #c2e59c 100%);
 }
 
@@ -377,9 +410,13 @@ input[type='submit'] {
 }
 
 .marker__icon {
-    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
     margin: 4px 6px;
-    align-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
 }
 
 .marker__icon--small {
@@ -402,19 +439,16 @@ input[type='submit'] {
     height: 30px;
     border-radius: 50% 50% 50% 0;
     position: absolute;
-    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
     margin: -20px 0 0 -20px;
     z-index: 2;
 }
 
-.pin {
-    left: 40px;
-    top: 30px;
-}
-
-.pin-colorful {
-    left: 40%;
-    top: 30%;
+.pin, .pulse {
+    left: 2.5rem;
+    top: 2rem;
 }
 
 .pin::after,
@@ -434,16 +468,12 @@ input[type='submit'] {
     width: 14px;
     position: absolute;
     margin: 11px 0px 0px -12px;
-    transform: rotateX(55deg);
+    -webkit-transform: rotateX(55deg);
+            transform: rotateX(55deg);
     z-index: 1;
 }
 
-.pulse {
-    left: 40px;
-    top: 30px;
-}
-
-.pulse-colorful {
+.pin-colorful, .pulse-colorful {
     left: 40%;
     top: 30%;
 }
@@ -456,10 +486,13 @@ input[type='submit'] {
     width: 40px;
     position: absolute;
     margin: -13px 0 0 -13px;
-    animation: pulsate 1s ease-out;
-    animation-iteration-count: infinite;
+    -webkit-animation: pulsate 1s ease-out;
+            animation: pulsate 1s ease-out;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
     opacity: 0;
-    animation-delay: 1.1s;
+    -webkit-animation-delay: 1.1s;
+            animation-delay: 1.1s;
 }
 
 /* Specific color for pin seen in search-view */
@@ -477,7 +510,8 @@ input[type='submit'] {
 }
 
 .pulse:after {
-    box-shadow: 0 0 1px 2px white;
+    -webkit-box-shadow: 0 0 1px 2px white;
+            box-shadow: 0 0 1px 2px white;
 }
 
 /* Specific color for pin seen in Google Map-view */
@@ -495,23 +529,84 @@ input[type='submit'] {
 }
 
 .pulse-colorful:after {
-    box-shadow: 0 0 1px 2px var(--blue);
+    -webkit-box-shadow: 0 0 1px 2px var(--blue);
+            box-shadow: 0 0 1px 2px var(--blue);
 }
 
 /*
     Animation used for pin
 */
 
-@keyframes pulsate {
+@-webkit-keyframes pulsate {
     0% {
-        transform: scale(0.1, 0.1);
+        -webkit-transform: scale(0.1, 0.1);
+                transform: scale(0.1, 0.1);
         opacity: 0;
     }
     50% {
         opacity: 1;
     }
     100% {
-        transform: scale(1.2, 1.2);
+        -webkit-transform: scale(1.2, 1.2);
+                transform: scale(1.2, 1.2);
         opacity: 0;
+    }
+}
+
+@keyframes pulsate {
+    0% {
+        -webkit-transform: scale(0.1, 0.1);
+                transform: scale(0.1, 0.1);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: scale(1.2, 1.2);
+                transform: scale(1.2, 1.2);
+        opacity: 0;
+    }
+}
+
+
+/*
+    Desktop View
+*/
+
+@media only screen and (min-width: 380px){
+    .container-outer{
+        width: 330px;
+        max-height: 600px;
+        margin: 0 auto;
+        top: 50px;
+        overflow: scroll;
+        -webkit-box-shadow: 1px 12px 44px -2px rgba(89,125,81,0.61);
+        -moz-box-shadow: 1px 12px 44px -2px rgba(89,125,81,0.61);
+        box-shadow: 1px 12px 44px -2px rgba(89,125,81,0.61);
+    }
+
+    .block{
+        display: inherit;
+    }
+
+    .container-inner{
+        min-height: 310px;
+    }
+
+    .map{
+        max-height: 600px;
+    }
+
+    nav{
+        bottom: 50px;
+        width: 330px;
+        margin: 0 auto;
+        text-align: center;
+        right: auto;
+    }
+
+    .margin-last {
+        margin: 30px 0 50px 0;
     }
 }
