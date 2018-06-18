@@ -1,11 +1,11 @@
 import React from 'react';
 import HeartIcon from '../icons/basic_elaboration_message_heart.svg';
 
-function Placeholder() {
+function Placeholder(props) {
     return (
         <React.Fragment>
-            Återvinn skräpet efter din snabblunch, fikapaus eller picknick.
-            Snabbt och smidigt – mitt i stan!
+            Osäker på hur du ska återvinna ditt skräp?
+            Använd sökfunktionen eller <span class="bold" data-txt="karta" onClick={props.toggleView}>hitta närmsta station.</span>
             <img
                 className="margin-top-large center block"
                 src={HeartIcon}
