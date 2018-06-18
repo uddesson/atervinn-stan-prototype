@@ -136,10 +136,9 @@ ul {
 
 li {
     color: var(--primary-green-dark);
-    line-height: 2.3;
-    margin-left: 20px;
+    line-height: 2.5;
     text-align: left;
-    font-size: 1.1em;
+    font-size: 1.06em;
     list-style: circle;
 }
 
@@ -307,6 +306,10 @@ input[type='submit'] {
     text-transform: uppercase;
 }
 
+.letter-spacing {
+    letter-spacing: 0.07em;
+}
+
 .line-height-small {
     line-height: 100%;
 }
@@ -345,6 +348,10 @@ input[type='submit'] {
 
 .border-none {
     border: none;
+}
+
+.link{
+    color: var(--blue);
 }
 
 .text-white {
