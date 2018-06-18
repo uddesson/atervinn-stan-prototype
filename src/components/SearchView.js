@@ -92,8 +92,8 @@ class SearchView extends React.Component {
             this.setState({
                 searchOutput: {
                     name: '',
-                    noResults: `Vi hittar inga resultat som matchar din sökning.
-                                Testa något annat!`,
+                    noResults: `Hm, den var klurig. Försök återvinna det så gott du kan – 
+                    så jobbar vi vidare på att utöka databasen!`,
                 },
                 showPlaceholder: false,
                 autoCompleteResults: [],
