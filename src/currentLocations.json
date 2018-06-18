@@ -1,10 +1,5 @@
 [
 	{
-		"lat": 59.336615,
-		"lng": 17.898955,
-		"text": "Ängbybadet"
-	},
-	{
 		"lat": 59.309962,
 		"lng": 17.982764,
 		"text": "Örnsbergs klippbad"
@@ -35,19 +30,14 @@
 		"text": "St göransparken"
 	},
 	{
-		"lat": 59.327690,
-		"lng": 18.027270,
+		"lat": 59.329586,
+		"lng": 18.023290,
 		"text": "Rålambshovsparken"
 	},
 	{
 		"lat": 59.331137,
 		"lng": 18.072059,
 		"text": "Kungsträdgården"
-	},
-	{
-		"lat": 59.329586,
-		"lng": 18.071839,
-		"text": "Karl XIIs torg"
 	},
 	{
 		"lat": 59.340460,
