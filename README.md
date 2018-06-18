@@ -17,7 +17,3 @@ The app was inspired by an [initiative by Stockolms Stad](http://www.stockholm.s
 
 * Download or clone this repository
 * Run npm install
-
-### Note
-
-Since the prototype is meant to be used only on mobile devices, desktop and tablet have not been considered. We recommended you look at it within a minimized browser window or on your phone.
