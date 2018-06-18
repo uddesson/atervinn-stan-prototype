@@ -16,7 +16,6 @@ class App extends Component {
         keyWord: 'sök' // Default, home screen
     };
 
-    // TODO: Refactor
     toggleView = event => {
         let keyWord = event.target.value;
         let alternativeKey = event.target.dataset.txt;
