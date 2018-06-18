@@ -125,7 +125,7 @@ function HelpView() {
                         <h2 className="margin-y-5">
                             Nu kan du återvinna igen!
                         </h2>
-                        <small className="uppercase text-green-dark">
+                        <small className="uppercase letter-spacing text-green-dark">
                             Publicerat 2 April 2018
                         </small>
                         <p className="line-height-medium">

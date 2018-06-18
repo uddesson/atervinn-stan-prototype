@@ -92,8 +92,8 @@ class SearchView extends React.Component {
             this.setState({
                 searchOutput: {
                     name: '',
-                    noResults: `Vi hittar inga resultat som matchar din sökning.
-                                Testa något annat!`,
+                    noResults: `Hm, den var klurig. Försök återvinna det så gott du kan – 
+                    så jobbar vi vidare på att utöka databasen!`,
                 },
                 showPlaceholder: false,
                 autoCompleteResults: [],
@@ -142,13 +142,6 @@ class SearchView extends React.Component {
                     handleSearch={this.handleSearch}
                 />
 
-                {this.state.autoCompleteResults && (
-                    <AutoCompleteResults
-                        handleAutoCompleteSearch={this.handleAutoCompleteSearch}
-                        autoCompleteResults={this.state.autoCompleteResults}
-                    />
-                )}
-
                 <div className="container-inner center line-height-extra">
                     <SearchOutput
                         nameOfObject={this.state.searchOutput.name}
@@ -158,6 +151,13 @@ class SearchView extends React.Component {
                         sortedAs={this.state.searchOutput.sortedAs}
                         noResults={this.state.searchOutput.noResults}
                     />
+
+                    {this.state.autoCompleteResults && (
+                        <AutoCompleteResults
+                            handleAutoCompleteSearch={this.handleAutoCompleteSearch}
+                            autoCompleteResults={this.state.autoCompleteResults}
+                        />
+                    )}
                 </div>
             </React.Fragment>
         );
