@@ -142,13 +142,6 @@ class SearchView extends React.Component {
                     handleSearch={this.handleSearch}
                 />
 
-                {this.state.autoCompleteResults && (
-                    <AutoCompleteResults
-                        handleAutoCompleteSearch={this.handleAutoCompleteSearch}
-                        autoCompleteResults={this.state.autoCompleteResults}
-                    />
-                )}
-
                 <div className="container-inner center line-height-extra">
                     <SearchOutput
                         nameOfObject={this.state.searchOutput.name}
@@ -158,6 +151,13 @@ class SearchView extends React.Component {
                         sortedAs={this.state.searchOutput.sortedAs}
                         noResults={this.state.searchOutput.noResults}
                     />
+
+                    {this.state.autoCompleteResults && (
+                        <AutoCompleteResults
+                            handleAutoCompleteSearch={this.handleAutoCompleteSearch}
+                            autoCompleteResults={this.state.autoCompleteResults}
+                        />
+                    )}
                 </div>
             </React.Fragment>
         );
