@@ -35,7 +35,7 @@ function HelpView() {
                                 Plast
                             </span>
                             <span className="line-height-normal">
-                                t.ex. plastbestick, korkar och olika
+                                T.ex. plastbestick, korkar och olika
                                 plastförpackningar.
                             </span>
                         </div>
@@ -51,7 +51,7 @@ function HelpView() {
                                 Papper
                             </span>
                             <span className="line-height-normal">
-                                t.ex. kaffemuggar, pappersbestick och andra
+                                T.ex. kaffemuggar, pappersbestick och andra
                                 typer av pappersförpackningar.
                             </span>
                         </div>
@@ -67,7 +67,7 @@ function HelpView() {
                                 Glas
                             </span>
                             <span className="line-height-normal">
-                                t.ex. glasflaskor och glasburkar.
+                                T.ex. glasflaskor och glasburkar.
                             </span>
                         </div>
                     </div>
@@ -82,7 +82,7 @@ function HelpView() {
                                 Övrigt avfall
                             </span>
                             <span className="line-height-normal">
-                                t.ex. servetter, ciggarettfimpar och tuggummi.
+                                T.ex. servetter, ciggarettfimpar och tuggummi.
                             </span>
                         </div>
                     </div>
