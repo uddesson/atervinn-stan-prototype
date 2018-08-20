@@ -4,7 +4,7 @@ import HeartIcon from '../icons/basic_elaboration_message_heart.svg';
 function Placeholder(props) {
     return (
         <React.Fragment>
-            Osäker på hur ditt skräp ska återvinnas?
+            Osäker på var eller hur ditt skräp ska återvinnas?
             Använd sökfunktionen. Du kan också gå direkt till
                 <span class="link" data-txt="karta" onClick={props.toggleView}>
                     <span> </span>närmsta station.
