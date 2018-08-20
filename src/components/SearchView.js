@@ -56,7 +56,6 @@ class SearchView extends React.Component {
         this.setState({ autoCompleteResults });
 
         if (autoCompleteResults.length === 0) {
-            console.log('0 autocomplete');
             this.setState({ autoCompleteResults, deactivateSearch: false });
         } else {
             this.setState({ autoCompleteResults, deactivateSearch: true });
