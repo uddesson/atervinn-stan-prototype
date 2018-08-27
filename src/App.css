@@ -17,12 +17,12 @@ html {
     /* --nav-width: 33.33333%; */
 }
 
-#root{
-  background-image: -webkit-linear-gradient(330deg, #9ac89f 0%, #b6e6bc 100%);
-  background-image: -o-linear-gradient(330deg, #9ac89f 0%, #b6e6bc 100%);
-  background-image: linear-gradient(120deg, #9ac89f 0%, #b6e6bc 100%);
-  min-height: 100vh;
-  overflow: hidden;
+#root {
+    background-image: -webkit-linear-gradient(330deg, #9ac89f 0%, #b6e6bc 100%);
+    background-image: -o-linear-gradient(330deg, #9ac89f 0%, #b6e6bc 100%);
+    background-image: linear-gradient(120deg, #9ac89f 0%, #b6e6bc 100%);
+    min-height: 100vh;
+    overflow: hidden;
 }
 
 h1,
@@ -159,7 +159,7 @@ li:hover {
     border-radius: 0px;
     -webkit-appearance: none;
     -moz-appearance: none;
-         appearance: none;
+    appearance: none;
 }
 
 .nav-icon {
@@ -174,7 +174,7 @@ li:hover {
     font-size: 0.9em;
     -webkit-appearance: none;
     -moz-appearance: none;
-         appearance: none;
+    appearance: none;
     height: 70px;
     padding: 10px 30px;
     color: white;
@@ -216,7 +216,7 @@ input[type='submit'] {
     margin-bottom: 10px;
     -webkit-appearance: none;
     -moz-appearance: none;
-         appearance: none;
+    appearance: none;
 }
 
 input[type='text'] {
@@ -263,7 +263,6 @@ input[type='submit'] {
 .margin-top {
     margin-top: 5px;
 }
-
 
 .margin-top-large {
     margin-top: 15px;
@@ -353,7 +352,7 @@ input[type='submit'] {
     border: none;
 }
 
-.link{
+.link {
     color: var(--blue);
 }
 
@@ -385,7 +384,7 @@ input[type='submit'] {
 
 .align-baseline {
     -ms-flex-item-align: baseline;
-        align-self: baseline;
+    align-self: baseline;
 }
 
 .inline {
@@ -395,8 +394,8 @@ input[type='submit'] {
 .marker {
     border-radius: 50% 50% 50% 0;
     -webkit-transform: rotate(-45deg);
-        -ms-transform: rotate(-45deg);
-            transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
     margin: -20px 0 0 -20px;
     background-image: -webkit-linear-gradient(30deg, #64b3f4 0%, #c2e59c 100%);
     background-image: -o-linear-gradient(30deg, #64b3f4 0%, #c2e59c 100%);
@@ -421,12 +420,12 @@ input[type='submit'] {
 
 .marker__icon {
     -webkit-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-            transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
     margin: 4px 6px;
     -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
+    -ms-grid-row-align: center;
+    align-self: center;
 }
 
 .marker__icon--small {
@@ -450,13 +449,14 @@ input[type='submit'] {
     border-radius: 50% 50% 50% 0;
     position: absolute;
     -webkit-transform: rotate(-45deg);
-        -ms-transform: rotate(-45deg);
-            transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
     margin: -20px 0 0 -20px;
     z-index: 2;
 }
 
-.pin, .pulse {
+.pin,
+.pulse {
     left: 2.5rem;
     top: 2rem;
 }
@@ -479,11 +479,12 @@ input[type='submit'] {
     position: absolute;
     margin: 11px 0px 0px -12px;
     -webkit-transform: rotateX(55deg);
-            transform: rotateX(55deg);
+    transform: rotateX(55deg);
     z-index: 1;
 }
 
-.pin-colorful, .pulse-colorful {
+.pin-colorful,
+.pulse-colorful {
     left: 40%;
     top: 30%;
 }
@@ -497,12 +498,12 @@ input[type='submit'] {
     position: absolute;
     margin: -13px 0 0 -13px;
     -webkit-animation: pulsate 1s ease-out;
-            animation: pulsate 1s ease-out;
+    animation: pulsate 1s ease-out;
     -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
     opacity: 0;
     -webkit-animation-delay: 1.1s;
-            animation-delay: 1.1s;
+    animation-delay: 1.1s;
 }
 
 /* Specific color for pin seen in search-view */
@@ -521,7 +522,7 @@ input[type='submit'] {
 
 .pulse:after {
     -webkit-box-shadow: 0 0 1px 2px white;
-            box-shadow: 0 0 1px 2px white;
+    box-shadow: 0 0 1px 2px white;
 }
 
 /* Specific color for pin seen in Google Map-view */
@@ -540,7 +541,7 @@ input[type='submit'] {
 
 .pulse-colorful:after {
     -webkit-box-shadow: 0 0 1px 2px var(--blue);
-            box-shadow: 0 0 1px 2px var(--blue);
+    box-shadow: 0 0 1px 2px var(--blue);
 }
 
 /*
@@ -550,7 +551,7 @@ input[type='submit'] {
 @-webkit-keyframes pulsate {
     0% {
         -webkit-transform: scale(0.1, 0.1);
-                transform: scale(0.1, 0.1);
+        transform: scale(0.1, 0.1);
         opacity: 0;
     }
     50% {
@@ -558,7 +559,7 @@ input[type='submit'] {
     }
     100% {
         -webkit-transform: scale(1.2, 1.2);
-                transform: scale(1.2, 1.2);
+        transform: scale(1.2, 1.2);
         opacity: 0;
     }
 }
@@ -566,7 +567,7 @@ input[type='submit'] {
 @keyframes pulsate {
     0% {
         -webkit-transform: scale(0.1, 0.1);
-                transform: scale(0.1, 0.1);
+        transform: scale(0.1, 0.1);
         opacity: 0;
     }
     50% {
@@ -574,47 +575,57 @@ input[type='submit'] {
     }
     100% {
         -webkit-transform: scale(1.2, 1.2);
-                transform: scale(1.2, 1.2);
+        transform: scale(1.2, 1.2);
         opacity: 0;
     }
 }
-
 
 /*
     Desktop View
 */
 
-@media only screen and (min-width: 450px){
-    .container-outer{
+@media only screen and (min-width: 450px) {
+    .container-outer {
         width: 330px;
+        height: 95vh;
         margin: 0 auto;
-        top: 50px;
+        top: 15px;
         /* overflow: scroll; */
         /* max-height: 600px; */
-        -webkit-box-shadow: 1px 12px 44px -2px rgba(89,125,81,0.61);
-        -moz-box-shadow: 1px 12px 44px -2px rgba(89,125,81,0.61);
-        box-shadow: 1px 12px 44px -2px rgba(89,125,81,0.61);
+        -webkit-box-shadow: 1px 12px 44px -2px rgba(89, 125, 81, 0.61);
+        -moz-box-shadow: 1px 12px 44px -2px rgba(89, 125, 81, 0.61);
+        box-shadow: 1px 12px 44px -2px rgba(89, 125, 81, 0.61);
     }
 
-    .container{
-      max-height: 500px;
-      overflow: scroll;
+    .container {
+        height: 76vh;
+        overflow: scroll;
     }
 
-    .block{
+    .block {
         display: inherit;
     }
 
-    .container-inner{
+    .container-inner {
         min-height: 310px;
+        font-size: 1rem;
+        line-height: 1.7;
     }
 
-    .map{
-        max-height: 600px;
+    header {
+        height: 80px;
     }
 
-    nav{
-        position: inherit;
+    .heart-message-icon {
+        margin-top: 10px;
+    }
+
+    .map {
+        max-height: 85vh;
+    }
+
+    nav {
+        position: absolute;
         width: 330px;
         margin: 0 auto;
         text-align: center;
